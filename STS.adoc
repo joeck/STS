@@ -12,8 +12,7 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 
 == Kennzahlen
 
-[%header,caption=]
-.Kennzahlen
+[%header, stripes="even"]
 |===
 
 | ^.^|nicht Klassiert ^.^|Klassiert
@@ -45,3 +44,33 @@ stem:[(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")]
 ^.^|stem:[S_("korr") = sqrt(S^2)]
 
 |===
+
+stem:[n/(n-1) S^2 = S_("korr")^2]
+
+stem:[sqrt(n/(n-1)) S = S_("korr")]
+
+== Korrelation
+
+Gegeben sind die Wertepaare stem:[(x_1, y_1), (x_2, y_2),...,(x_n, y_n)]
+
+[%header, cols="1,2", stripes="even"]
+|===
+|Bezeichnung |Formel
+
+.^|Standardabweichung 
+^.^|
+stem:[S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2)] 
+
+stem:[S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2)]
+
+.^|Kovarianz
+^.^|stem:[S_(xy) = sqrt(1/n sum_(i=1)^n (x_i - bar x)(y_i - bar y)) = bar (xy) - barx * bary]
+
+.^|Korrelationskoeffizient
+^.^|
+stem:[r_(xy) = S_(xy)/(S_x * S_y) = (bar (xy) - barx * bary)/(sqrt (bar (x^2) - (bar x)^2) * sqrt (bar (y^2) - (bar y)^2))]
+
+|===
+
+stem:[bar(xy) = 1/n sum_(i=1)^n x_i y_i] und
+stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]

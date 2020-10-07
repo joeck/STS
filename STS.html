@@ -462,8 +462,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1 data-line-13">
 <h2 id="_kennzahlen">Kennzahlen</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch data-line-17">
-<caption class="title">Kennzahlen</caption>
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-16">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -510,13 +509,58 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
+<div class="paragraph data-line-48">
+<p>\$n/(n-1) S^2 = S_("korr")^2\$</p>
+</div>
+<div class="paragraph data-line-50">
+<p>\$sqrt(n/(n-1)) S = S_("korr")\$</p>
+</div>
+</div>
+</div>
+<div class="sect1 data-line-52">
+<h2 id="_korrelation">Korrelation</h2>
+<div class="sectionbody">
+<div class="paragraph data-line-54">
+<p>Gegeben sind die Wertepaare \$(x_1, y_1), (x_2, y_2),...,(x_n, y_n)\$</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-57">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Bezeichnung</th>
+<th class="tableblock halign-left valign-top">Formel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Standardabweichung</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2)\$</p>
+<p class="tableblock">\$S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Kovarianz</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_(xy) = sqrt(1/n sum_(i=1)^n (x_i - bar x)(y_i - bar y)) = bar (xy) - barx * bary\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Korrelationskoeffizient</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$r_(xy) = S_(xy)/(S_x * S_y) = (bar (xy) - barx * bary)/(sqrt (bar (x^2) - (bar x)^2) * sqrt (bar (y^2) - (bar y)^2))\$</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph data-line-75">
+<p>\$bar(xy) = 1/n sum_(i=1)^n x_i y_i\$ und
+\$bar(x^2) = 1/n sum_(i=1)^n x_i^2\$</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2020-10-07 15:06:00 +0200
+Last updated 2020-10-07 17:31:17 +0200
 </div>
 </div>
 <script type="text/x-mathjax-config">
