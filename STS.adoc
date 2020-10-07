@@ -16,32 +16,32 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 .Kennzahlen
 |===
 
-| |nicht Klassiert |Klassiert
+| ^.^|nicht Klassiert ^.^|Klassiert
 
-|**Quartil**
-|
-|
+.^|**Quantil**
+^.^|stem:[X_q = {(1/2 (X_(nq) + X_(nq+1)), n * q " ganzzahlig"),(\|~X_(nq)~\|, n * q " nicht ganzzahlig"):}]
+^.^|stem:["F(A)" <= x  <= "F(B)"]
 
-|**arith. Mittel**
-|
-|
+stem:[(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")]
 
-|**Varianz**
-^.^|stem:[S^(2) = 1/(n) * sum_(i=1)^n (x_i - bar x)^2]
+.^|**arith. Mittel**
+^.^|stem:[bar x = 1/n sum_(i=1)^n x_i]
+^.^|stem:[bar x = sum_(i=1)^m M_i * f_i]
+
+.^|**Varianz**
+^.^|stem:[S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2]
 ^.^|stem:[S^2 = sum_(i=1)^n (M_i - bar x)^2]
 
-|**Varianz (korr)**
-|stem:[S_("korr")^2 = 1/(n-1) sum_(i=1)^n (x_i - bar x)^2]
-|stem:[S_("korr")^2 = n/(n-1) s^2]
+.^|**Varianz (korr)**
+^.^|stem:[S_("korr")^2 = 1/(n-1) sum_(i=1)^n (x_i - bar x)^2]
+^.^|stem:[S_("korr")^2 = n/(n-1) s^2]
 
-|**Standardabweichung**
-|stem:[S = sqrt(S^2)]
-|stem:[S = sqrt(S^2)]
+.^|**Standardabweichung**
+^.^|stem:[S = sqrt(S^2)]
+^.^|stem:[S = sqrt(S^2)]
 
-|**Standardabweichung (korr)**
-|stem:[S_("korr") = sqrt(S^2)]
-|stem:[S_("korr") = sqrt(S^2)]
+.^|**Standardabweichung (korr)**
+^.^|stem:[S_("korr") = sqrt(S^2)]
+^.^|stem:[S_("korr") = sqrt(S^2)]
 
 |===
-
-stem:[S^2 = 1/(n) * sum_(i=1)^n (x_i - bar x)^2]
