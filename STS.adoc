@@ -5,6 +5,7 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 :toc:
 :icons: font
 :stem: asciimath
+:imagesdir: img
 
 == PDF
 
@@ -74,3 +75,7 @@ stem:[r_(xy) = S_(xy)/(S_x * S_y) = (bar (xy) - barx * bary)/(sqrt (bar (x^2) - 
 
 stem:[bar(xy) = 1/n sum_(i=1)^n x_i y_i] und
 stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
+
+== Kombinatorik
+
+image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
