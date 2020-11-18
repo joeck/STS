@@ -3,15 +3,16 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 0.1,
 
 :toc:
+:secnums:
 :icons: font
 :stem: asciimath
 :imagesdir: img
 
-== PDF
+= PDF
 
-== CDF
+= CDF
 
-== Kennzahlen
+= Kennzahlen
 
 [%header, stripes="even"]
 |===
@@ -50,7 +51,7 @@ stem:[n/(n-1) S^2 = S_("korr")^2]
 
 stem:[sqrt(n/(n-1)) S = S_("korr")]
 
-== Korrelation
+= Korrelation
 
 Gegeben sind die Wertepaare stem:[(x_1, y_1), (x_2, y_2),...,(x_n, y_n)]
 
@@ -76,6 +77,75 @@ stem:[r_(xy) = S_(xy)/(S_x * S_y) = (bar (xy) - barx * bary)/(sqrt (bar (x^2) - 
 stem:[bar(xy) = 1/n sum_(i=1)^n x_i y_i] und
 stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
 
-== Kombinatorik
+= Kombinatorik
 
 image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
+
+
+= Spezielle Verteilungen
+
+=== Diskrete und stetige Verteilungen
+
+|===
+|                       | diskrete Zufallsvariablen | stetige Zufallsvariablen
+
+| Graphische Darstellung von f | Stabdiagramm      | Graph
+a|Dichtefunktion / PDF  | stem:[f(x) = P(X = x)]   | stem:[f(x)=F'(x)P(X=x)]
+
+a| Kummulative Verteilungsfunktion / CDF | stem:[F(x)=P(X <= x)=sum_(x<=X)f(x)] | stem:[F(x)=P(X <= x)=int_-oo^xf(x)dx]
+
+a| Wahrscheinlichkeiten | stem:[P(a<=X<=b)=sum_(a<=x<=b)f(x)] | stem:[P(a<=X<=b)=int_a^bf(x)dx]
+
+a| Erwartungswert       | stem:[E(X)=sum_(x in RR)f(x)*x] 
+stem:[E(X^2)=sum_(x in RR)f(x)*x^2] 
+| stem:[E(X)=int_-oo^oo f(x)*x dx] 
+stem:[E(X^2)=int_-oo^oo f(x)*x^2 dx]
+
+a| Varianz              | stem:[V(X)=sum_(x in RR) f(x) * (x - E(X))^2] |stem:[V(X)=int_-oo^oo f(x) * (x - E(X))^2]
+
+
+|===
+
+**Verschiebungssatzu für die Varianz** = stem:[V(X)=E(X^2) - E(X)^2]
+
+=== Diskrete Verteilungen
+
+==== Hypergeometrische Verteilung
+
+stem:[X~H(N,M,n)]
+
+stem:[P(X=x) = (((M), (x)) * ((N - M),(n -x)))/(((N),(n))) ("PDF von " X)]
+
+|===
+a| Erwartungswert       | stem:[mu=E(X)=n*M/N]
+
+a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*M/N(1-M/N)(N-n)/(N-1))]
+
+a| Varianz              | stem:[sigma^2=V(X)=n*M/N(1-M/N)(N-n)/(N-1)]
+|===
+
+==== Binomialverteilung
+
+stem:[X ~B(n,p)]
+
+stem:[P(X=x)=((n),(x)) * p^x * q^(n-x) " , " p = M/N]
+
+|===
+a| Erwartungswert       | stem:[mu=E(X)=n*p]
+
+a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*p*q)]
+
+a| Varianz              | stem:[sigma^2=V(X)=n*p*q]
+|===
+
+==== Poissonverteilung
+
+
+== Standardnomarlverteilung
+
+stem:[P(|x-mu| <= e)]
+
+
+stem:[X~N(mu,sigma)]
+
+stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]

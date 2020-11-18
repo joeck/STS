@@ -447,22 +447,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div class="sect1 data-line-9">
-<h2 id="_pdf">PDF</h2>
-<div class="sectionbody">
+<h1 id="_pdf" class="sect0 data-line-11">PDF</h1>
 
-</div>
-</div>
-<div class="sect1 data-line-11">
-<h2 id="_cdf">CDF</h2>
-<div class="sectionbody">
+<h1 id="_cdf" class="sect0 data-line-13">CDF</h1>
 
-</div>
-</div>
-<div class="sect1 data-line-13">
-<h2 id="_kennzahlen">Kennzahlen</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stripes-even stretch data-line-16">
+<h1 id="_kennzahlen" class="sect0 data-line-15">Kennzahlen</h1>
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-18">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -509,21 +499,17 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-48">
+<div class="paragraph data-line-50">
 <p>\$n/(n-1) S^2 = S_("korr")^2\$</p>
 </div>
-<div class="paragraph data-line-50">
+<div class="paragraph data-line-52">
 <p>\$sqrt(n/(n-1)) S = S_("korr")\$</p>
 </div>
-</div>
-</div>
-<div class="sect1 data-line-52">
-<h2 id="_korrelation">Korrelation</h2>
-<div class="sectionbody">
-<div class="paragraph data-line-54">
+<h1 id="_korrelation" class="sect0 data-line-54">Korrelation</h1>
+<div class="paragraph data-line-56">
 <p>Gegeben sind die Wertepaare \$(x_1, y_1), (x_2, y_2),...,(x_n, y_n)\$</p>
 </div>
-<table class="tableblock frame-all grid-all stripes-even stretch data-line-57">
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-59">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -550,9 +536,165 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-75">
+<div class="paragraph data-line-77">
 <p>\$bar(xy) = 1/n sum_(i=1)^n x_i y_i\$ und
 \$bar(x^2) = 1/n sum_(i=1)^n x_i^2\$</p>
+</div>
+<h1 id="_kombinatorik" class="sect0 data-line-80">Kombinatorik</h1>
+<div class="imageblock data-line-82">
+<div class="content">
+<img src="img/bil_kombinatorik_uebersicht.png" alt="Kombinatorik übersicht">
+</div>
+</div>
+<h1 id="_spezielle_verteilungen" class="sect0 data-line-85">Spezielle Verteilungen</h1>
+<div class="sect2 data-line-87">
+<h3 id="_diskrete_und_stetige_verteilungen">Diskrete und stetige Verteilungen</h3>
+<table class="tableblock frame-all grid-all stretch data-line-89">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">diskrete Zufallsvariablen</th>
+<th class="tableblock halign-left valign-top">stetige Zufallsvariablen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graphische Darstellung von f</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stabdiagramm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graph</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Dichtefunktion / PDF</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f(x) = P(X = x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$f(x)=F'(x)P(X=x)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Kummulative Verteilungsfunktion / CDF</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$F(x)=P(X &lt;= x)=sum_(x&lt;=X)f(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$F(x)=P(X &lt;= x)=int_-oo^xf(x)dx\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Wahrscheinlichkeiten</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$P(a&lt;=X&lt;=b)=sum_(a&lt;=x&lt;=b)f(x)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$P(a&lt;=X&lt;=b)=int_a^bf(x)dx\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Erwartungswert</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(X)=sum_(x in RR)f(x)*x\$
+\$E(X^2)=sum_(x in RR)f(x)*x^2\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(X)=int_-oo^oo f(x)*x dx\$
+\$E(X^2)=int_-oo^oo f(x)*x^2 dx\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Varianz</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$V(X)=sum_(x in RR) f(x) * (x - E(X))^2\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$V(X)=int_-oo^oo f(x) * (x - E(X))^2\$</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph data-line-109">
+<p><strong>Verschiebungssatzu für die Varianz</strong> = \$V(X)=E(X^2) - E(X)^2\$</p>
+</div>
+</div>
+<div class="sect2 data-line-111">
+<h3 id="_diskrete_verteilungen">Diskrete Verteilungen</h3>
+<div class="sect3 data-line-113">
+<h4 id="_hypergeometrische_verteilung">Hypergeometrische Verteilung</h4>
+<div class="paragraph data-line-115">
+<p>\$X~H(N,M,n)\$</p>
+</div>
+<div class="paragraph data-line-117">
+<p>\$P(X=x) = (((M), (x)) * ((N - M),(n -x)))/(((N),(n))) ("PDF von " X)\$</p>
+</div>
+<table class="tableblock frame-all grid-all stretch data-line-119">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Erwartungswert</th>
+<th class="tableblock halign-left valign-top">\$mu=E(X)=n*M/N\$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Standardabweichung</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma=S(X)=sqrt(n*M/N(1-M/N)(N-n)/(N-1))\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Varianz</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma^2=V(X)=n*M/N(1-M/N)(N-n)/(N-1)\$</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2 data-line-127">
+<h3 id="_binomialverteilung">Binomialverteilung</h3>
+<div class="paragraph data-line-129">
+<p>\$X ~B(n,p)\$</p>
+</div>
+<div class="paragraph data-line-131">
+<p>\$P(X=x)=((n),(x)) * p^x * q^(n-x) " , " p = M/N\$</p>
+</div>
+<table class="tableblock frame-all grid-all stretch data-line-133">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Erwartungswert</th>
+<th class="tableblock halign-left valign-top">\$mu=E(X)=n*p\$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Standardabweichung</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma=S(X)=sqrt(n*p*q)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Varianz</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma^2=V(X)=n*p*q\$</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect1 data-line-141">
+<h2 id="_standardnomarlverteilung">Standardnomarlverteilung</h2>
+<div class="sectionbody">
+<div class="paragraph data-line-143">
+<p>\$P(|x-mu| &lt;= e)\$</p>
+</div>
+<div class="paragraph data-line-146">
+<p>\$X~N(mu,sigma)\$</p>
+</div>
+<div class="paragraph data-line-148">
+<p>\$phi_(mu,sigma)(x) = phi((x-mu)/sigma)\$</p>
 </div>
 </div>
 </div>
@@ -560,7 +702,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2020-10-07 17:31:17 +0200
+Last updated 2020-11-18 19:38:13 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
