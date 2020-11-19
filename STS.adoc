@@ -128,7 +128,7 @@ a| Varianz              | stem:[sigma^2=V(X)=n*M/N(1-M/N)(N-n)/(N-1)]
 
 stem:[X ~B(n,p)]
 
-stem:[P(X=x)=((n),(x)) * p^x * q^(n-x) " , " p = M/N]
+stem:[P(X=x)=((n),(x)) * p^x * (1-p)^(n-x) " , " p = M/N]
 
 |===
 a| Erwartungswert       | stem:[mu=E(X)=n*p]
