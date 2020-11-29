@@ -133,9 +133,9 @@ stem:[P(X=x)=((n),(x)) * p^x * (1-p)^(n-x) " , " p = M/N]
 |===
 a| Erwartungswert       | stem:[mu=E(X)=n*p]
 
-a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*p*q)]
+a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*p*(1-p))]
 
-a| Varianz              | stem:[sigma^2=V(X)=n*p*q]
+a| Varianz              | stem:[sigma^2=V(X)=n*p*(1-p)]
 |===
 
 ==== Poissonverteilung
