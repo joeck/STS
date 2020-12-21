@@ -8,11 +8,11 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 :stem: asciimath
 :imagesdir: img
 
-= PDF
+== PDF
 
-= CDF
+== CDF
 
-= Kennzahlen
+== Kennzahlen
 
 [%header, stripes="even"]
 |===
@@ -51,7 +51,7 @@ stem:[n/(n-1) S^2 = S_("korr")^2]
 
 stem:[sqrt(n/(n-1)) S = S_("korr")]
 
-= Korrelation
+== Korrelation
 
 Gegeben sind die Wertepaare stem:[(x_1, y_1), (x_2, y_2),...,(x_n, y_n)]
 
@@ -77,12 +77,12 @@ stem:[r_(xy) = S_(xy)/(S_x * S_y) = (bar (xy) - barx * bary)/(sqrt (bar (x^2) - 
 stem:[bar(xy) = 1/n sum_(i=1)^n x_i y_i] und
 stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
 
-= Kombinatorik
+== Kombinatorik
 
 image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
 
 
-= Spezielle Verteilungen
+== Spezielle Verteilungen
 
 === Diskrete und stetige Verteilungen
 
@@ -145,7 +145,20 @@ a| Varianz              | stem:[sigma^2=V(X)=n*p*(1-p)]
 
 stem:[P(|x-mu| <= e)]
 
-
 stem:[X~N(mu,sigma)]
 
 stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
+
+== Schliessende Statistik
+
+=== Grösse des Vertrauensintervall (VI)
+
+* Je grösser das stem:[lambda], desto grösser das VI
+* Je grösser der Stichprobenumfang stem:[n], desto kleiner das VI (bei konsistenten Schätzfunktionen)
+* Bei unbekannter Varianz wird ds VI grösser
+
+image:Vertrauensintervalle.png[Vertrauensintervalle]
+
+== Tabelle
+
+link:img/TabellenVerteilungen.pdf[Tabellen Verteilung, window=_blank]
