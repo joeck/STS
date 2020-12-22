@@ -110,35 +110,58 @@ a| Varianz              | stem:[V(X)=sum_(x in RR) f(x) * (x - E(X))^2] |stem:[V
 
 === Diskrete Verteilungen
 
+[cols="<.^s,3*^.^"]
+|===
+|Verteilungen:                              | Hypergeometrisch                      | Binomial              | Poisson
+
+| Funktion                                  | stem:[X~H(N,M,n)]                     | stem:[X~B(n,p)]       | stem:[X~P(lambda)]
+| Erwartungswert stem:[E(x) = mu]           | stem:[n*M/N]                          | stem:[n*p]            | stem:[lambda]
+| Varianz stem:[V(X)= sigma^2]              | stem:[n*M/N(1-M/N)(N-n)/(N-1)]        | stem:[n*p*(1-p)]      | stem:[lambda]
+| Standardabweichung stem:[S(X) = sigma]    | stem:[sqrt(n*M/N(1-M/N)(N-n)/(N-1))]  | stem:[sqrt(n*p*(1-p))] | stem:[sqrt(lambda)]
+| Dichtefunktion stem:[P(X=k) ]             | stem:[(((M),(k))*((N-M),(n-k)))/(((N),(n)))] | stem:[((n),(x)) * p^x * (1-p)^(n-x)] | stem:[lambda^k / (k!) * e^(-lambda)]
+
+|===
+
 ==== Hypergeometrische Verteilung
+Wir betrachten eine Urne mit 𝑁 Objekten. Darunter sind 𝑀 Objekte einer bestimmten Sorte, wir nennen sie Sorte 𝑀, die Merkmalsträger und 𝑁 − 𝑀 andersartige Objekte. Es wird zufällig eine Stichprobe von 𝑛 Objekten aus der Urne entnommen. Das Ziehen kann auf einmal passieren oder auch nacheinander, wichtig aber ist, dass ohne Zurücklegen der Objekte gezogen wird
 
 stem:[X~H(N,M,n)]
 
-stem:[P(X=x) = (((M), (x)) * ((N - M),(n -x)))/(((N),(n))) ("PDF von " X)]
+[horizontal]
+N:: Total/Alle Lose
+M:: Merkmalsträger/Gewinne
+n:: Stichproben/Ziehungen
 
+=== Bernoulliverteilung
+
+Bernoulli-Experimente sind Zufallsexperimente mit nur zwei möglichen Ergebnissen. Wir bezeichnen diese Ergebnisse mit 1 und 0.
+
+[cols="3*", grid="none", frame="none"]
 |===
-a| Erwartungswert       | stem:[mu=E(X)=n*M/N]
+|stem:[P(X=1) = p]
 
-a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*M/N(1-M/N)(N-n)/(N-1))]
+stem:[P(X=0) = 1 - p]
 
-a| Varianz              | stem:[sigma^2=V(X)=n*M/N(1-M/N)(N-n)/(N-1)]
+|stem:[E(x) = p]
+
+stem:[E(x^2) = p]
+
+|stem:[V(x) = p * (1-p)]
 |===
 
 ==== Binomialverteilung
 
+Die Binomialverteilung ist eine Bernoulliverteilung die stem:[n] mal durchgeführt wird.
+
 stem:[X ~B(n,p)]
 
-stem:[P(X=x)=((n),(x)) * p^x * (1-p)^(n-x) " , " p = M/N]
-
-|===
-a| Erwartungswert       | stem:[mu=E(X)=n*p]
-
-a| Standardabweichung   | stem:[sigma=S(X)=sqrt(n*p*(1-p))]
-
-a| Varianz              | stem:[sigma^2=V(X)=n*p*(1-p)]
-|===
+[horizontal]
+n:: Anzahl Wiederholungen
+p:: Wahrscheinlichkeit für ein Ergebnis 1,  stem:[p = M/N]
 
 ==== Poissonverteilung
+
+Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.
 
 
 == Standardnomarlverteilung
@@ -149,11 +172,34 @@ stem:[X~N(mu,sigma)]
 
 stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
 
+=== Approximaiton durch Normalverteilung
+
+. Geschlossenes Intervall zu offenes intervall: stem:[P(? < X < ?) -> P(?+1 <= X <= ?-1)]
+. Intervall um 0.5 auf beiden Seiten vergrössern: stem:[P(?-0.5 <= Y <= ?+0.5)]
+
+== Zentraler Grenzwertsatz (ZGS)
+
+|===
+| | Summe | Arithmethisches Mittel
+
+| Erwartungswert | stem:[E(x) = mu * n] | stem:[E(x) = mu]
+.^| Varianz        .^| stem:[V(x) = sigma^2 *n] .^| stem:[V(x) = sigma^2 / n] 
+
+|===
+
+[cols="3,7",grid="none", frame="none"]
+|===
+| image:BernoulliVerteilung.png[Bernoulli Verteilung, width="300px"] |stem:[E(betax) = int_0^1 f(x)dx ]
+
+stem:[V(alphax) = alpha * E(betax) * (1 - E(betax))]
+
+|===
+
 == Schliessende Statistik
 
 === Grösse des Vertrauensintervall (VI)
 
-* Je grösser das stem:[lambda], desto grösser das VI
+* Je grösser das stem:[gamma], desto grösser das VI
 * Je grösser der Stichprobenumfang stem:[n], desto kleiner das VI (bei konsistenten Schätzfunktionen)
 * Bei unbekannter Varianz wird ds VI grösser
 

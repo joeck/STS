@@ -635,125 +635,250 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sect2 data-line-111">
 <h3 id="_diskrete_verteilungen">Diskrete Verteilungen</h3>
-<div class="sect3 data-line-113">
+<table class="tableblock frame-all grid-all stretch data-line-114">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-middle">Verteilungen:</th>
+<th class="tableblock halign-center valign-middle">Hypergeometrisch</th>
+<th class="tableblock halign-center valign-middle">Binomial</th>
+<th class="tableblock halign-center valign-middle">Poisson</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Funktion</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$X~H(N,M,n)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$X~B(n,p)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$X~P(lambda)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Erwartungswert \$E(x) = mu\$</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$n*M/N\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$n*p\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$lambda\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Varianz \$V(X)= sigma^2\$</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$n*M/N(1-M/N)(N-n)/(N-1)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$n*p*(1-p)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$lambda\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Standardabweichung \$S(X) = sigma\$</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$sqrt(n*M/N(1-M/N)(N-n)/(N-1))\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$sqrt(n*p*(1-p))\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$sqrt(lambda)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Dichtefunktion \$P(X=k) \$</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$(((M),(k))*((N-M),(n-k)))/(((N),(n)))\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$((n),(x)) * p^x * (1-p)^(n-x)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$lambda^k / (k!) * e^(-lambda)\$</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3 data-line-125">
 <h4 id="_hypergeometrische_verteilung">Hypergeometrische Verteilung</h4>
-<div class="paragraph data-line-115">
+<div class="paragraph data-line-126">
+<p>Wir betrachten eine Urne mit 𝑁 Objekten. Darunter sind 𝑀 Objekte einer bestimmten Sorte, wir nennen sie Sorte 𝑀, die Merkmalsträger und 𝑁 − 𝑀 andersartige Objekte. Es wird zufällig eine Stichprobe von 𝑛 Objekten aus der Urne entnommen. Das Ziehen kann auf einmal passieren oder auch nacheinander, wichtig aber ist, dass ohne Zurücklegen der Objekte gezogen wird</p>
+</div>
+<div class="paragraph data-line-128">
 <p>\$X~H(N,M,n)\$</p>
 </div>
-<div class="paragraph data-line-117">
-<p>\$P(X=x) = (((M), (x)) * ((N - M),(n -x)))/(((N),(n))) ("PDF von " X)\$</p>
-</div>
-<table class="tableblock frame-all grid-all stretch data-line-119">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
+<div class="hdlist data-line-131">
+<table>
 <tr>
-<th class="tableblock halign-left valign-top">Erwartungswert</th>
-<th class="tableblock halign-left valign-top">\$mu=E(X)=n*M/N\$</th>
+<td class="hdlist1">
+N
+</td>
+<td class="hdlist2">
+<p>Total/Alle Lose</p>
+</td>
 </tr>
-</thead>
+<tr>
+<td class="hdlist1">
+M
+</td>
+<td class="hdlist2">
+<p>Merkmalsträger/Gewinne</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+n
+</td>
+<td class="hdlist2">
+<p>Stichproben/Ziehungen</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2 data-line-135">
+<h3 id="_bernoulliverteilung">Bernoulliverteilung</h3>
+<div class="paragraph data-line-137">
+<p>Bernoulli-Experimente sind Zufallsexperimente mit nur zwei möglichen Ergebnissen. Wir bezeichnen diese Ergebnisse mit 1 und 0.</p>
+</div>
+<table class="tableblock frame-none grid-none stretch data-line-140">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Standardabweichung</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma=S(X)=sqrt(n*M/N(1-M/N)(N-n)/(N-1))\$</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Varianz</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma^2=V(X)=n*M/N(1-M/N)(N-n)/(N-1)\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$P(X=1) = p\$</p>
+<p class="tableblock">\$P(X=0) = 1 - p\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(x) = p\$</p>
+<p class="tableblock">\$E(x^2) = p\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$V(x) = p * (1-p)\$</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect3 data-line-127">
+<div class="sect3 data-line-152">
 <h4 id="_binomialverteilung">Binomialverteilung</h4>
-<div class="paragraph data-line-129">
+<div class="paragraph data-line-154">
+<p>Die Binomialverteilung ist eine Bernoulliverteilung die \$n\$ mal durchgeführt wird.</p>
+</div>
+<div class="paragraph data-line-156">
 <p>\$X ~B(n,p)\$</p>
 </div>
-<div class="paragraph data-line-131">
-<p>\$P(X=x)=((n),(x)) * p^x * (1-p)^(n-x) " , " p = M/N\$</p>
+<div class="hdlist data-line-159">
+<table>
+<tr>
+<td class="hdlist1">
+n
+</td>
+<td class="hdlist2">
+<p>Anzahl Wiederholungen</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+p
+</td>
+<td class="hdlist2">
+<p>Wahrscheinlichkeit für ein Ergebnis 1,  \$p = M/N\$</p>
+</td>
+</tr>
+</table>
 </div>
-<table class="tableblock frame-all grid-all stretch data-line-133">
+</div>
+<div class="sect3 data-line-162">
+<h4 id="_poissonverteilung">Poissonverteilung</h4>
+<div class="paragraph data-line-164">
+<p>Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 data-line-167">
+<h2 id="_standardnomarlverteilung">Standardnomarlverteilung</h2>
+<div class="sectionbody">
+<div class="paragraph data-line-169">
+<p>\$P(|x-mu| &lt;= e)\$</p>
+</div>
+<div class="paragraph data-line-171">
+<p>\$X~N(mu,sigma)\$</p>
+</div>
+<div class="paragraph data-line-173">
+<p>\$phi_(mu,sigma)(x) = phi((x-mu)/sigma)\$</p>
+</div>
+<div class="sect2 data-line-175">
+<h3 id="_approximaiton_durch_normalverteilung">Approximaiton durch Normalverteilung</h3>
+<div class="olist arabic data-line-177">
+<ol class="arabic">
+<li class="data-line-177">
+<p>Geschlossenes Intervall zu offenes intervall: \$P(? &lt; X &lt; ?) -&gt; P(?+1 &lt;= X &lt;= ?-1)\$</p>
+</li>
+<li class="data-line-178">
+<p>Intervall um 0.5 auf beiden Seiten vergrössern: \$P(?-0.5 &lt;= Y &lt;= ?+0.5)\$</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 data-line-180">
+<h2 id="_zentraler_grenzwertsatz_zgs">Zentraler Grenzwertsatz (ZGS)</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch data-line-182">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Erwartungswert</th>
-<th class="tableblock halign-left valign-top">\$mu=E(X)=n*p\$</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Summe</th>
+<th class="tableblock halign-left valign-top">Arithmethisches Mittel</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Standardabweichung</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma=S(X)=sqrt(n*p*(1-p))\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Erwartungswert</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(x) = mu * n\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(x) = mu\$</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Varianz</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">\$sigma^2=V(X)=n*p*(1-p)\$</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Varianz</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">\$V(x) = sigma^2 *n\$</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">\$V(x) = sigma^2 / n\$</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-none grid-none stretch data-line-191">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="img/BernoulliVerteilung.png" alt="Bernoulli Verteilung" width="300px"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$E(betax) = int_0^1 f(x)dx \$</p>
+<p class="tableblock">\$V(alphax) = alpha * E(betax) * (1 - E(betax))\$</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect3 data-line-141">
-<h4 id="_poissonverteilung">Poissonverteilung</h4>
-
 </div>
-</div>
-</div>
-</div>
-<div class="sect1 data-line-144">
-<h2 id="_standardnomarlverteilung">Standardnomarlverteilung</h2>
-<div class="sectionbody">
-<div class="paragraph data-line-146">
-<p>\$P(|x-mu| &lt;= e)\$</p>
-</div>
-<div class="paragraph data-line-148">
-<p>\$X~N(mu,sigma)\$</p>
-</div>
-<div class="paragraph data-line-150">
-<p>\$phi_(mu,sigma)(x) = phi((x-mu)/sigma)\$</p>
-</div>
-</div>
-</div>
-<div class="sect1 data-line-152">
+<div class="sect1 data-line-198">
 <h2 id="_schliessende_statistik">Schliessende Statistik</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-154">
+<div class="sect2 data-line-200">
 <h3 id="_grösse_des_vertrauensintervall_vi">Grösse des Vertrauensintervall (VI)</h3>
-<div class="ulist data-line-156">
+<div class="ulist data-line-202">
 <ul>
-<li class="data-line-156">
-<p>Je grösser das \$lambda\$, desto grösser das VI</p>
+<li class="data-line-202">
+<p>Je grösser das \$gamma\$, desto grösser das VI</p>
 </li>
-<li class="data-line-157">
+<li class="data-line-203">
 <p>Je grösser der Stichprobenumfang \$n\$, desto kleiner das VI (bei konsistenten Schätzfunktionen)</p>
 </li>
-<li class="data-line-158">
+<li class="data-line-204">
 <p>Bei unbekannter Varianz wird ds VI grösser</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-160">
+<div class="paragraph data-line-206">
 <p><span class="image"><img src="img/Vertrauensintervalle.png" alt="Vertrauensintervalle"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-162">
+<div class="sect1 data-line-208">
 <h2 id="_tabelle">Tabelle</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-164">
+<div class="paragraph data-line-210">
 <p><a href="img/TabellenVerteilungen.pdf" target="_blank" rel="noopener">Tabellen Verteilung</a></p>
 </div>
 </div>
@@ -762,7 +887,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2020-12-21 18:34:23 +0100
+Last updated 2020-12-22 17:29:50 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
