@@ -81,8 +81,27 @@ stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
 
 image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
 
+== Elementare Wahrscheinlichkeitsrechnung
+
+stem:[E(X) = sum_(x in RR)(x * f(x))]
+
+stem:[V(X) = E((X-E(X))^2) = sum_(x in RR)((x-E(X))^2 * f(x))]
+
+stem:[(P(A nn B))/(P(A)) = P(B|A)]
+
+Linearität des Erwartungwertes::
+* stem:[E(X+Y) = E(X) + E(Y)]
+* stem:[E(alphaX) = alphaE(X)]
+
+Verschiebungssatz für die Varianz:: 
+* stem:[V(X) = E(X^2) - E(X)^2 = (sum_(x in RR)P(X=x) * x^2)-E(X)^2]
+* stem:[V(alpha X + beta) = alpha^2 * V(X) " mit " alpha,beta in RR]
 
 == Spezielle Verteilungen
+
+Eine **diskrete** Zufallsvariable nimmt nur bestimmte Werte an
+
+Eine **stetige** Zufallsvariable kann jedem beliebigen WErt in einem Intervall annehmen
 
 === Diskrete und stetige Verteilungen
 
