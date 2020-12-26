@@ -490,12 +490,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Varianz</strong></p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2\$</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^2 = sum_(i=1)^n (M_i - bar x)^2\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^2 = sum_(i=1)^n (M_i - bar x)^2 * f_i\$</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Varianz (korr)</strong></p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr")^2 = 1/(n-1) sum_(i=1)^n (x_i - bar x)^2\$</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr")^2 = n/(n-1) s^2\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr")^2 = n/(n-1) S^2\$</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Standardabweichung</strong></p></td>
@@ -504,8 +504,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Standardabweichung (korr)</strong></p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr") = sqrt(S^2)\$</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr") = sqrt(S^2)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr") = sqrt(S_("korr")^2)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_("korr") = sqrt(S_("korr")^2)\$</p></td>
 </tr>
 </tbody>
 </table>
@@ -887,7 +887,7 @@ p
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2020-12-22 17:29:50 +0100
+Last updated 2020-12-26 14:55:18 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">

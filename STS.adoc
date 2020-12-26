@@ -31,19 +31,19 @@ stem:[(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")]
 
 .^|**Varianz**
 ^.^|stem:[S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2]
-^.^|stem:[S^2 = sum_(i=1)^n (M_i - bar x)^2]
+^.^|stem:[S^2 = sum_(i=1)^n (M_i - bar x)^2 * f_i]
 
 .^|**Varianz (korr)**
 ^.^|stem:[S_("korr")^2 = 1/(n-1) sum_(i=1)^n (x_i - bar x)^2]
-^.^|stem:[S_("korr")^2 = n/(n-1) s^2]
+^.^|stem:[S_("korr")^2 = n/(n-1) S^2]
 
 .^|**Standardabweichung**
 ^.^|stem:[S = sqrt(S^2)]
 ^.^|stem:[S = sqrt(S^2)]
 
 .^|**Standardabweichung (korr)**
-^.^|stem:[S_("korr") = sqrt(S^2)]
-^.^|stem:[S_("korr") = sqrt(S^2)]
+^.^|stem:[S_("korr") = sqrt(S_("korr")^2)]
+^.^|stem:[S_("korr") = sqrt(S_("korr")^2)]
 
 |===
 
