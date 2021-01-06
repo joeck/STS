@@ -11,51 +11,45 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 
 == Stichproben
 
-image:stichproben.png[Stichproben Merkmale, 300]
+image:stichproben.png[Stichproben Merkmale, 50%]
 
-== PDF
-
-[cols="2*a"]
-|===
-|nicht klassiert | klassiert
-
-|image:PDF.png[PDF]
-|image:PDFklassiert.png[PDF klassiert]
-
-|===
-
-== CDF
+== PDF & CDF
 
 [cols="2*a"]
 |===
-|nicht klassiert | klassiert
+| Nichtklassiert | Klassiert
 
-|image:CDF.png[CDF]
-|image:CDFklassiert.png[CDF klassiert]
-
-|===
-
-== Nichtklassiert
-
+|
 [cols="2*a"]
-|===
-|PDF | CDF
+!===
+!PDF ! CDF 
 
-|image:PDF.png[PDF]
-|image:CDF.png[CDF]
+!image:PDF.png[PDF]
+!image:CDF.png[CDF]
 
-|===
+!image:PDF1.png[PDF]
+!image:CDF1.png[CDF]
+!===
 
-== Klassiert
-
+|
 [cols="2*a"]
-|===
-|PDF | CDF
+!===
+!PDF  ! CDF 
 
-|image:PDFklassiert.png[PDF klassiert]
-|image:CDFklassiert.png[CDF klassiert]
+!image:PDFklassiert.png[PDF klassiert]
+
+stem:["höhe" = "rel. Hkeit." / "breite"]
+!image:CDFklassiert.png[CDF klassiert]
+
+!image:KlassLeg.png[Legend, 50] image:PDFklassiert1.png[PDF klassiert, 150]
+!image:CDFklassiert1.png[CDF klassiert, 150]
+!===
 
 |===
+
+[horizontal]
+PDF:: Probability density function
+CDF:: Cumulative distribution function
 
 == Kennzahlen
 
@@ -95,6 +89,14 @@ stem:[(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")]
 stem:[n/(n-1) S^2 = S_("korr")^2]
 
 stem:[sqrt(n/(n-1)) S = S_("korr")]
+
+=== Boxplot
+
+Box: Zeigt das erste Quartil , den Median und das dritte Quartil.
+
+Quartilsabstand: , d.h. die Breite der Box.
+
+image:Boxplot.png[Boxplot, 75%]
 
 == Korrelation
 
