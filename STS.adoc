@@ -8,9 +8,54 @@ Joël Plambeck <plambjoe@students.zhaw.ch>
 :stem: asciimath
 :imagesdir: img
 
+
+== Stichproben
+
+image:stichproben.png[Stichproben Merkmale, 300]
+
 == PDF
 
+[cols="2*a"]
+|===
+|nicht klassiert | klassiert
+
+|image:PDF.png[PDF]
+|image:PDFklassiert.png[PDF klassiert]
+
+|===
+
 == CDF
+
+[cols="2*a"]
+|===
+|nicht klassiert | klassiert
+
+|image:CDF.png[CDF]
+|image:CDFklassiert.png[CDF klassiert]
+
+|===
+
+== Nichtklassiert
+
+[cols="2*a"]
+|===
+|PDF | CDF
+
+|image:PDF.png[PDF]
+|image:CDF.png[CDF]
+
+|===
+
+== Klassiert
+
+[cols="2*a"]
+|===
+|PDF | CDF
+
+|image:PDFklassiert.png[PDF klassiert]
+|image:CDFklassiert.png[CDF klassiert]
+
+|===
 
 == Kennzahlen
 
