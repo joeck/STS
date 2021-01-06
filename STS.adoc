@@ -243,6 +243,58 @@ stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
 . Geschlossenes Intervall zu offenes intervall: stem:[P(? < X < ?) -> P(?+1 <= X <= ?-1)]
 . Intervall um 0.5 auf beiden Seiten vergrössern: stem:[P(?-0.5 <= Y <= ?+0.5)]
 
+== KQM
+
+[cols="7a,3a", frame="none"]
+|===
+|
+[horizontal]
+Residuenvarianz:: stem:[S_epsilon^2 = bar (epsilon^2) - bar (epsilon)^2]
+Erklärtevarianz:: stem:[S_haty^2 = bar (haty^2) - bar haty ^2 ]
+Totalevarianz:: stem:[S_y^2]
+Bestimmtheistmass:: stem:[R^2 = (S_haty^2)/(S_y^2)]
+Pearson Korrelationskoeffizient:: stem:[r_(xy)= sqrt(S_(xy)^2/(S_x^2 * S_y^2))=S_(xy)/(S_x * S_y)]
+
+|
+stem:[S_x^2 = bar(x^2) - barx^2]
+
+stem:[S_y^2 = bar(y^2) - bary^2]
+
+stem:[S_(xy) = bar(xy) - (barx * bary)]
+
+stem:[haty_i = g(x_i) = m * x_i + d]
+
+stem:[epsilon_i = y_i - haty_i]
+|===
+
+=== Regressionsgerade
+
+image:regression.png[Regressionsgerade, 300]
+
+[horizontal]
+Normalengleichung:: stem:[A^T * A * vecx = A^T * vecy "  " <=> "  " A^T * A * ((m),(q)) = A^T * ((y_1), (vdots " "), (y_n))]
++
+stem:[vecx = (A^T * A)^-1 * A^T * vecy]
+
+[cols="2*a"]
+|===
+|nach y | nach x
+
+|stem:[y(x) = m*x + d]
+
+stem:[m = S_(xy)/S_x^2]
+
+stem:[d = bary - m * barx]
+
+|stem:[x(y) = m*y+d]
+
+stem:[m = S_(xy)/S_y^2]
+
+stem:[d = barx - m * bary]
+
+|===
+
+
 == Zentraler Grenzwertsatz (ZGS)
 
 |===

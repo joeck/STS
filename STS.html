@@ -970,9 +970,138 @@ p
 </div>
 </div>
 <div class="sect1 data-line-246">
+<h2 id="_kqm">KQM</h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-all stretch data-line-249">
+<colgroup>
+<col style="width: 70%;">
+<col style="width: 30%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+Residuenvarianz
+</td>
+<td class="hdlist2">
+<p>\$S_epsilon^2 = bar (epsilon^2) - bar (epsilon)^2\$</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Erklärtevarianz
+</td>
+<td class="hdlist2">
+<p>\$S_haty^2 = bar (haty^2) - bar haty ^2 \$</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Totalevarianz
+</td>
+<td class="hdlist2">
+<p>\$S_y^2\$</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Bestimmtheistmass
+</td>
+<td class="hdlist2">
+<p>\$R^2 = (S_haty^2)/(S_y^2)\$</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+Pearson Korrelationskoeffizient
+</td>
+<td class="hdlist2">
+<p>\$r_(xy)= sqrt(S_(xy)^2/(S_x^2 * S_y^2))=S_(xy)/(S_x * S_y)\$</p>
+</td>
+</tr>
+</table>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$S_x^2 = bar(x^2) - barx^2\$</p>
+</div>
+<div class="paragraph">
+<p>\$S_y^2 = bar(y^2) - bary^2\$</p>
+</div>
+<div class="paragraph">
+<p>\$S_(xy) = bar(xy) - (barx * bary)\$</p>
+</div>
+<div class="paragraph">
+<p>\$haty_i = g(x_i) = m * x_i + d\$</p>
+</div>
+<div class="paragraph">
+<p>\$epsilon_i = y_i - haty_i\$</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2 data-line-270">
+<h3 id="_regressionsgerade">Regressionsgerade</h3>
+<div class="paragraph data-line-272">
+<p><span class="image"><img src="img/regression.png" alt="Regressionsgerade" width="300"></span></p>
+</div>
+<div class="hdlist data-line-275">
+<table>
+<tr>
+<td class="hdlist1">
+Normalengleichung
+</td>
+<td class="hdlist2">
+<p>\$A^T * A * vecx = A^T * vecy "  " &lt;=&gt; "  " A^T * A * ((m),(q)) = A^T * ((y_1), (vdots " "), (y_n))\$</p>
+<div class="paragraph data-line-277">
+<p>\$vecx = (A^T * A)^-1 * A^T * vecy\$</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch data-line-280">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">nach y</th>
+<th class="tableblock halign-left valign-top">nach x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$y(x) = m*x + d\$</p>
+</div>
+<div class="paragraph">
+<p>\$m = S_(xy)/S_x^2\$</p>
+</div>
+<div class="paragraph">
+<p>\$d = bary - m * barx\$</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$x(y) = m*y+d\$</p>
+</div>
+<div class="paragraph">
+<p>\$m = S_(xy)/S_y^2\$</p>
+</div>
+<div class="paragraph">
+<p>\$d = barx - m * bary\$</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1 data-line-298">
 <h2 id="_zentraler_grenzwertsatz_zgs">Zentraler Grenzwertsatz (ZGS)</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch data-line-248">
+<table class="tableblock frame-all grid-all stretch data-line-300">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -998,7 +1127,7 @@ p
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-none stretch data-line-257">
+<table class="tableblock frame-none grid-none stretch data-line-309">
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1013,34 +1142,34 @@ p
 </table>
 </div>
 </div>
-<div class="sect1 data-line-264">
+<div class="sect1 data-line-316">
 <h2 id="_schliessende_statistik">Schliessende Statistik</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-266">
+<div class="sect2 data-line-318">
 <h3 id="_grösse_des_vertrauensintervall_vi">Grösse des Vertrauensintervall (VI)</h3>
-<div class="ulist data-line-268">
+<div class="ulist data-line-320">
 <ul>
-<li class="data-line-268">
+<li class="data-line-320">
 <p>Je grösser das \$gamma\$, desto grösser das VI</p>
 </li>
-<li class="data-line-269">
+<li class="data-line-321">
 <p>Je grösser der Stichprobenumfang \$n\$, desto kleiner das VI (bei konsistenten Schätzfunktionen)</p>
 </li>
-<li class="data-line-270">
+<li class="data-line-322">
 <p>Bei unbekannter Varianz wird ds VI grösser</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-272">
+<div class="paragraph data-line-324">
 <p><span class="image"><img src="img/Vertrauensintervalle.png" alt="Vertrauensintervalle"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-274">
+<div class="sect1 data-line-326">
 <h2 id="_tabelle">Tabelle</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-276">
+<div class="paragraph data-line-328">
 <p><a href="img/TabellenVerteilungen.pdf" target="_blank" rel="noopener">Tabellen Verteilung</a></p>
 </div>
 </div>
@@ -1049,7 +1178,7 @@ p
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2021-01-06 11:51:49 +0100
+Last updated 2021-01-06 13:40:04 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">
