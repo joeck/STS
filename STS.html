@@ -436,6 +436,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article data-line-1">
 <div id="header">
@@ -445,20 +446,60 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="email" class="email"><a href="mailto:plambjoe@students.zhaw.ch">plambjoe@students.zhaw.ch</a></span><br>
 <span id="revnumber">version 0.1</span>
 </div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_stichproben">1. Stichproben</a></li>
+<li><a href="#_pdf_cdf">2. PDF &amp; CDF</a></li>
+<li><a href="#_kennzahlen">3. Kennzahlen</a>
+<ul class="sectlevel2">
+<li><a href="#_boxplot">3.1. Boxplot</a></li>
+</ul>
+</li>
+<li><a href="#_korrelation">4. Korrelation</a></li>
+<li><a href="#_kombinatorik">5. Kombinatorik</a></li>
+<li><a href="#_elementare_wahrscheinlichkeitsrechnung">6. Elementare Wahrscheinlichkeitsrechnung</a></li>
+<li><a href="#_spezielle_verteilungen">7. Spezielle Verteilungen</a>
+<ul class="sectlevel2">
+<li><a href="#_diskrete_und_stetige_verteilungen">7.1. Diskrete und stetige Verteilungen</a></li>
+<li><a href="#_diskrete_verteilungen">7.2. Diskrete Verteilungen</a></li>
+<li><a href="#_bernoulliverteilung">7.3. Bernoulliverteilung</a></li>
+</ul>
+</li>
+<li><a href="#_standardnomarlverteilung">8. Standardnomarlverteilung</a>
+<ul class="sectlevel2">
+<li><a href="#_zentraler_grenzwertsatz">8.1. Zentraler Grenzwertsatz</a></li>
+<li><a href="#_approximaiton_durch_normalverteilung">8.2. Approximaiton durch Normalverteilung</a></li>
+</ul>
+</li>
+<li><a href="#_kqm">9. KQM</a>
+<ul class="sectlevel2">
+<li><a href="#_regressionsgerade">9.1. Regressionsgerade</a></li>
+</ul>
+</li>
+<li><a href="#_zentraler_grenzwertsatz_zgs">10. Zentraler Grenzwertsatz (ZGS)</a></li>
+<li><a href="#_schliessende_statistik">11. Schliessende Statistik</a>
+<ul class="sectlevel2">
+<li><a href="#_grösse_des_vertrauensintervall_vi">11.1. Grösse des Vertrauensintervall (VI)</a></li>
+</ul>
+</li>
+<li><a href="#_tabelle">12. Tabelle</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div class="sect1 data-line-12">
-<h2 id="_stichproben">Stichproben</h2>
+<div class="sect1 data-line-11">
+<h2 id="_stichproben">1. Stichproben</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-14">
+<div class="paragraph data-line-13">
 <p><span class="image"><img src="img/stichproben.png" alt="Stichproben Merkmale" width="50%"></span></p>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-16">
-<h2 id="_pdf_cdf">PDF &amp; CDF</h2>
+<div class="sect1 data-line-15">
+<h2 id="_pdf_cdf">2. PDF &amp; CDF</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch data-line-19">
+<table class="tableblock frame-all grid-all stretch data-line-18">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -537,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
-<div class="hdlist data-line-51">
+<div class="hdlist data-line-50">
 <table>
 <tr>
 <td class="hdlist1">
@@ -559,10 +600,10 @@ CDF
 </div>
 </div>
 </div>
-<div class="sect1 data-line-54">
-<h2 id="_kennzahlen">Kennzahlen</h2>
+<div class="sect1 data-line-53">
+<h2 id="_kennzahlen">3. Kennzahlen</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stripes-even stretch data-line-57">
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-56">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -580,7 +621,10 @@ CDF
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Quantil</strong></p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">\$X_q = {(1/2 (X_(nq) + X_(nq+1)), n * q " ganzzahlig"),(|~X_(nq)~|, n * q " nicht ganzzahlig"):}\$</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">\$"F(A)" &lt;= x  &lt;= "F(B)"\$</p>
-<p class="tableblock">\$(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")\$</p></td>
+<p class="tableblock">\$(F(b)-F(a))/(b-a) = (q-F(a))/(R_q - a)\$</p>
+<p class="tableblock">\$R_q = a + (b-a) * (q -F(a))/(F(b)-F(a))\$</p>
+<p class="tableblock">\$F(x) = "CDF an Stelle " x\$</p>
+<p class="tableblock">\$R_q = 425 " (Bsp),  " q = 0.3 " (Bsp)"\$</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>arith. Mittel</strong></p></td>
@@ -589,7 +633,7 @@ CDF
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Varianz</strong></p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2 = bar(x^2) - bar x^2\$</p></td>
 <td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^2 = sum_(i=1)^n (M_i - bar x)^2 * f_i\$</p></td>
 </tr>
 <tr>
@@ -609,33 +653,33 @@ CDF
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-89">
+<div class="paragraph data-line-94">
 <p>\$n/(n-1) S^2 = S_("korr")^2\$</p>
 </div>
-<div class="paragraph data-line-91">
+<div class="paragraph data-line-96">
 <p>\$sqrt(n/(n-1)) S = S_("korr")\$</p>
 </div>
-<div class="sect2 data-line-93">
-<h3 id="_boxplot">Boxplot</h3>
-<div class="paragraph data-line-95">
+<div class="sect2 data-line-98">
+<h3 id="_boxplot">3.1. Boxplot</h3>
+<div class="paragraph data-line-100">
 <p>Box: Zeigt das erste Quartil , den Median und das dritte Quartil.</p>
 </div>
-<div class="paragraph data-line-97">
+<div class="paragraph data-line-102">
 <p>Quartilsabstand: , d.h. die Breite der Box.</p>
 </div>
-<div class="paragraph data-line-99">
+<div class="paragraph data-line-104">
 <p><span class="image"><img src="img/Boxplot.png" alt="Boxplot" width="75%"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-101">
-<h2 id="_korrelation">Korrelation</h2>
+<div class="sect1 data-line-106">
+<h2 id="_korrelation">4. Korrelation</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-103">
+<div class="paragraph data-line-108">
 <p>Gegeben sind die Wertepaare \$(x_1, y_1), (x_2, y_2),...,(x_n, y_n)\$</p>
 </div>
-<table class="tableblock frame-all grid-all stripes-even stretch data-line-106">
+<table class="tableblock frame-all grid-all stripes-even stretch data-line-111">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -649,8 +693,12 @@ CDF
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Standardabweichung</p></td>
-<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2)\$</p>
-<p class="tableblock">\$S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2)\$</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2) = sqrt (S_x^2)\$</p>
+<p class="tableblock">\$S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2) = sqrt (S_y^2)\$</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Varianz</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">\$S^(2) = bar(x^2) - bar x^2 = 1/n sum_(i=1)^n (x_i - bar x)^2\$</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Kovarianz</p></td>
@@ -662,44 +710,131 @@ CDF
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-124">
+<div class="paragraph data-line-132">
 <p>\$bar(xy) = 1/n sum_(i=1)^n x_i y_i\$ und
 \$bar(x^2) = 1/n sum_(i=1)^n x_i^2\$</p>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-127">
-<h2 id="_kombinatorik">Kombinatorik</h2>
+<div class="sect1 data-line-135">
+<h2 id="_kombinatorik">5. Kombinatorik</h2>
 <div class="sectionbody">
-<div class="imageblock data-line-129">
+<div class="imageblock data-line-137">
 <div class="content">
 <img src="img/bil_kombinatorik_uebersicht.png" alt="Kombinatorik übersicht">
 </div>
 </div>
+<div class="paragraph data-line-139">
+<p>Binomialkoeffizient: \$((n),(k)) = (n!)/((n-k)!*k!)\$</p>
+</div>
+<div class="dlist data-line-141">
+<dl>
+<dt class="hdlist1">Zahlenschlossproblem</dt>
+<dd>
+<p>Das Zahlenschloss hat 6 Zahlenkränze mit den Zahlen 0 bis 9. An jedem Kranz können
+unabhängig von den anderen Kränzen 10 verschiedene Zahlen eingestellt werden. Dabei kann jede Zahl mehrfach
+vorkommen.</p>
+<div class="paragraph data-line-145">
+<p>\$10^6\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Schwimmwettkampf</dt>
+<dd>
+<p>Platzierung 1-3 mit 10 Schwimmern</p>
+<div class="paragraph data-line-149">
+<p>\$10 * 9 * 8 = (10!)/((10-3)!) = 720\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Lotto</dt>
+<dd>
+<p>Bei der Ziehung 6 aus 49 spielt die Reihenfolge der gezogenen Zahlen keine Rolle, allerdings kann jede der Zahlen nur einmal vorkommen, da die Kugeln nicht mehr zurückgelegt werden. Käme es auf die Reihenfolge an, so hätte man wie im Problem mit den Schwimmerinnen 6 Plätze für mögliche 49 Zahlen zu besetzen.</p>
+</dd>
+<dt class="hdlist1">Bitproblem</dt>
+<dd>
+<p>Binärzahl mit 64 Stellen: \$2^64\$</p>
+</dd>
+<dt class="hdlist1">Zahnarztproblem</dt>
+<dd>
+<p>Eine Zahnärztin erlaubt den Kindern, nach der Behandlung zur Belohnung 3 Spielzeuge aus 5 Töpfen auszusuchen. Die 5 Töpfe sind jeweils mit einer Art Spielzeug befüllt. Wie viele verschiedene Möglichkeiten hat ein Kind?
+Das komplizierteste der hier beschriebenen Abzählprobleme wird mit einem Ersatzproblem gelöst. Dabei handelt
+es sich um ein äquivalentes Problem, welches einfacher zu lösen ist. Jede Auswahl von 3 Objekten aus den 5
+Schalen kann eindeutig durch 3 Striche III und 4 Kreuze XXXX beschrieben werden:</p>
+<div class="paragraph data-line-160">
+<p><span class="image"><img src="img/ZahnarztProblem.png" alt="Zahnarzt Problem" width="200"></span></p>
+</div>
+<div class="paragraph data-line-162">
+<p>\$((7), (3)) = ((7), (4)) = 35\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Fussballmannschaft</dt>
+<dd>
+<p>Aus 20 Studierenden sollen 11 Personen ausgewählt werden. Wie beim Lotto 6 aus 49 ist das Problem hier 11 aus 20.</p>
+<div class="paragraph data-line-166">
+<p>\$((20), (11)) = 167'960\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Buchstabenproblem</dt>
+<dd>
+<p>Mit 10 verschiedenen Buchstaben Worte von 5 Zeichen bilden.</p>
+</dd>
+<dt class="hdlist1">Tellschiessen</dt>
+<dd>
+<p>Wilhelm Tell schiesst mit drei Pfeilen auf eine Zielscheibe, welche in 10 ringförmige Bereiche unterteilt ist. Wenn
+man Wilhelm die Möglichkeit zugesteht daneben zu schiessen, so hat er 3 Versuche mit jeweils 11 verschiedenen Resultaten, wobei Resultate mehrfach vorkommen können.
+3 Objekte aus 11 möglichen Sorten zu wählen.</p>
+<div class="paragraph data-line-174">
+<p>\$((11 - 1 + 3), (3)) = ((13), (3)) = 286\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Napoleon</dt>
+<dd>
+<p>Napoleon schart seine 10 Generäle an einen kreisrunden Tisch mit 11 Plätzen. Bei der Sitzordnung kommt es nur auf die Reihenfolge der Personen an. Man könnte den Tisch auch drehen und die Sitzordnung bleibt dieselbe.</p>
+<div class="paragraph data-line-178">
+<p>\$10! = 3628800\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Gruppen</dt>
+<dd>
+<p>Wie viele verschiedene Personengruppen kann man aus einer Klasse mit 20 Studierenden bilden?
+Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
+1 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0</p>
+<div class="paragraph data-line-184">
+<p>\$2^20 - 1\$</p>
+</div>
+</dd>
+<dt class="hdlist1">Teilmengen</dt>
+<dd>
+<p>Eine Möglichkeit die Teilmengen der Menge {1,2,3,4 zu kategorisieren (Potenzmenge)</p>
+<div class="paragraph data-line-188">
+<p>\$2^n = 2^4 = 16\$</p>
+</div>
+</dd>
+</dl>
 </div>
 </div>
-<div class="sect1 data-line-131">
-<h2 id="_elementare_wahrscheinlichkeitsrechnung">Elementare Wahrscheinlichkeitsrechnung</h2>
+</div>
+<div class="sect1 data-line-190">
+<h2 id="_elementare_wahrscheinlichkeitsrechnung">6. Elementare Wahrscheinlichkeitsrechnung</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-133">
-<p>\$E(X) = sum_(x in RR)(x * f(x))\$</p>
-</div>
-<div class="paragraph data-line-135">
-<p>\$V(X) = E((X-E(X))^2) = sum_(x in RR)((x-E(X))^2 * f(x))\$</p>
-</div>
-<div class="paragraph data-line-137">
+<div class="paragraph data-line-192">
 <p>\$(P(A nn B))/(P(A)) = P(B|A)\$</p>
 </div>
-<div class="dlist data-line-139">
+<div class="paragraph data-line-194">
+<p>\$E(X) = sum_(x in RR)(x * f(x))\$</p>
+</div>
+<div class="paragraph data-line-196">
+<p>\$V(X) = E((X-E(X))^2) = sum_(x in RR)((x-E(X))^2 * f(x))\$</p>
+</div>
+<div class="dlist data-line-198">
 <dl>
 <dt class="hdlist1">Linearität des Erwartungwertes</dt>
 <dd>
-<div class="ulist data-line-140">
+<div class="ulist data-line-199">
 <ul>
-<li class="data-line-140">
+<li class="data-line-199">
 <p>\$E(X+Y) = E(X) + E(Y)\$</p>
 </li>
-<li class="data-line-141">
+<li class="data-line-200">
 <p>\$E(alphaX) = alphaE(X)\$</p>
 </li>
 </ul>
@@ -707,12 +842,12 @@ CDF
 </dd>
 <dt class="hdlist1">Verschiebungssatz für die Varianz</dt>
 <dd>
-<div class="ulist data-line-144">
+<div class="ulist data-line-203">
 <ul>
-<li class="data-line-144">
+<li class="data-line-203">
 <p>\$V(X) = E(X^2) - E(X)^2 = (sum_(x in RR)P(X=x) * x^2)-E(X)^2\$</p>
 </li>
-<li class="data-line-145">
+<li class="data-line-204">
 <p>\$V(alpha X + beta) = alpha^2 * V(X) " mit " alpha,beta in RR\$</p>
 </li>
 </ul>
@@ -722,18 +857,18 @@ CDF
 </div>
 </div>
 </div>
-<div class="sect1 data-line-147">
-<h2 id="_spezielle_verteilungen">Spezielle Verteilungen</h2>
+<div class="sect1 data-line-206">
+<h2 id="_spezielle_verteilungen">7. Spezielle Verteilungen</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-149">
+<div class="paragraph data-line-208">
 <p>Eine <strong>diskrete</strong> Zufallsvariable nimmt nur bestimmte Werte an</p>
 </div>
-<div class="paragraph data-line-151">
-<p>Eine <strong>stetige</strong> Zufallsvariable kann jedem beliebigen WErt in einem Intervall annehmen</p>
+<div class="paragraph data-line-210">
+<p>Eine <strong>stetige</strong> Zufallsvariable kann jedem beliebigen Wert in einem Intervall annehmen</p>
 </div>
-<div class="sect2 data-line-153">
-<h3 id="_diskrete_und_stetige_verteilungen">Diskrete und stetige Verteilungen</h3>
-<table class="tableblock frame-all grid-all stretch data-line-155">
+<div class="sect2 data-line-212">
+<h3 id="_diskrete_und_stetige_verteilungen">7.1. Diskrete und stetige Verteilungen</h3>
+<table class="tableblock frame-all grid-all stretch data-line-214">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -791,13 +926,13 @@ CDF
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-175">
+<div class="paragraph data-line-234">
 <p><strong>Verschiebungssatzu für die Varianz</strong> = \$V(X)=E(X^2) - E(X)^2\$</p>
 </div>
 </div>
-<div class="sect2 data-line-177">
-<h3 id="_diskrete_verteilungen">Diskrete Verteilungen</h3>
-<table class="tableblock frame-all grid-all stretch data-line-180">
+<div class="sect2 data-line-236">
+<h3 id="_diskrete_verteilungen">7.2. Diskrete Verteilungen</h3>
+<table class="tableblock frame-all grid-all stretch data-line-239">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -845,15 +980,15 @@ CDF
 </tr>
 </tbody>
 </table>
-<div class="sect3 data-line-191">
-<h4 id="_hypergeometrische_verteilung">Hypergeometrische Verteilung</h4>
-<div class="paragraph data-line-192">
+<div class="sect3 data-line-250">
+<h4 id="_hypergeometrische_verteilung">7.2.1. Hypergeometrische Verteilung</h4>
+<div class="paragraph data-line-251">
 <p>Wir betrachten eine Urne mit 𝑁 Objekten. Darunter sind 𝑀 Objekte einer bestimmten Sorte, wir nennen sie Sorte 𝑀, die Merkmalsträger und 𝑁 − 𝑀 andersartige Objekte. Es wird zufällig eine Stichprobe von 𝑛 Objekten aus der Urne entnommen. Das Ziehen kann auf einmal passieren oder auch nacheinander, wichtig aber ist, dass ohne Zurücklegen der Objekte gezogen wird</p>
 </div>
-<div class="paragraph data-line-194">
+<div class="paragraph data-line-253">
 <p>\$X~H(N,M,n)\$</p>
 </div>
-<div class="hdlist data-line-197">
+<div class="hdlist data-line-256">
 <table>
 <tr>
 <td class="hdlist1">
@@ -883,12 +1018,12 @@ n
 </div>
 </div>
 </div>
-<div class="sect2 data-line-201">
-<h3 id="_bernoulliverteilung">Bernoulliverteilung</h3>
-<div class="paragraph data-line-203">
+<div class="sect2 data-line-260">
+<h3 id="_bernoulliverteilung">7.3. Bernoulliverteilung</h3>
+<div class="paragraph data-line-262">
 <p>Bernoulli-Experimente sind Zufallsexperimente mit nur zwei möglichen Ergebnissen. Wir bezeichnen diese Ergebnisse mit 1 und 0.</p>
 </div>
-<table class="tableblock frame-none grid-none stretch data-line-206">
+<table class="tableblock frame-none grid-none stretch data-line-265">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -904,15 +1039,15 @@ n
 </tr>
 </tbody>
 </table>
-<div class="sect3 data-line-218">
-<h4 id="_binomialverteilung">Binomialverteilung</h4>
-<div class="paragraph data-line-220">
+<div class="sect3 data-line-277">
+<h4 id="_binomialverteilung">7.3.1. Binomialverteilung</h4>
+<div class="paragraph data-line-279">
 <p>Die Binomialverteilung ist eine Bernoulliverteilung die \$n\$ mal durchgeführt wird.</p>
 </div>
-<div class="paragraph data-line-222">
+<div class="paragraph data-line-281">
 <p>\$X ~B(n,p)\$</p>
 </div>
-<div class="hdlist data-line-225">
+<div class="hdlist data-line-284">
 <table>
 <tr>
 <td class="hdlist1">
@@ -933,35 +1068,72 @@ p
 </table>
 </div>
 </div>
-<div class="sect3 data-line-228">
-<h4 id="_poissonverteilung">Poissonverteilung</h4>
-<div class="paragraph data-line-230">
+<div class="sect3 data-line-287">
+<h4 id="_poissonverteilung">7.3.2. Poissonverteilung</h4>
+<div class="paragraph data-line-289">
+<p>\$X ~ P(lambda)\$</p>
+</div>
+<div class="hdlist data-line-292">
+<table>
+<tr>
+<td class="hdlist1">
+\$lambda\$
+</td>
+<td class="hdlist2">
+<p>\$lambda &gt; 0\$ , durchscnittliche Anzahl Ereignisse pro betratetes Zeitintervall</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph data-line-294">
 <p>Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-233">
-<h2 id="_standardnomarlverteilung">Standardnomarlverteilung</h2>
+<div class="sect1 data-line-297">
+<h2 id="_standardnomarlverteilung">8. Standardnomarlverteilung</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-235">
+<div class="paragraph data-line-299">
 <p>\$P(|x-mu| &lt;= e)\$</p>
 </div>
-<div class="paragraph data-line-237">
+<div class="paragraph data-line-301">
 <p>\$X~N(mu,sigma)\$</p>
 </div>
-<div class="paragraph data-line-239">
+<div class="paragraph data-line-303">
 <p>\$phi_(mu,sigma)(x) = phi((x-mu)/sigma)\$</p>
 </div>
-<div class="sect2 data-line-241">
-<h3 id="_approximaiton_durch_normalverteilung">Approximaiton durch Normalverteilung</h3>
-<div class="olist arabic data-line-243">
+<div class="sect2 data-line-305">
+<h3 id="_zentraler_grenzwertsatz">8.1. Zentraler Grenzwertsatz</h3>
+<table class="tableblock frame-none grid-none stretch data-line-308">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$U_n = (S_n - nmu)/(sqrtmu * sigma) = (barX_n - mu)/(sigma/sqrtn)\$</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$S_n = X_1 + X_2 + ... + X_n\$</p>
+</div>
+<div class="paragraph">
+<p>\$barX_n = 1/n (X_1 + X_2 + ... + X_n)\$</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2 data-line-317">
+<h3 id="_approximaiton_durch_normalverteilung">8.2. Approximaiton durch Normalverteilung</h3>
+<div class="olist arabic data-line-319">
 <ol class="arabic">
-<li class="data-line-243">
+<li class="data-line-319">
 <p>Geschlossenes Intervall zu offenes intervall: \$P(? &lt; X &lt; ?) -&gt; P(?+1 &lt;= X &lt;= ?-1)\$</p>
 </li>
-<li class="data-line-244">
+<li class="data-line-320">
 <p>Intervall um 0.5 auf beiden Seiten vergrössern: \$P(?-0.5 &lt;= Y &lt;= ?+0.5)\$</p>
 </li>
 </ol>
@@ -969,10 +1141,13 @@ p
 </div>
 </div>
 </div>
-<div class="sect1 data-line-246">
-<h2 id="_kqm">KQM</h2>
+<div class="sect1 data-line-322">
+<h2 id="_kqm">9. KQM</h2>
 <div class="sectionbody">
-<table class="tableblock frame-none grid-all stretch data-line-249">
+<div class="paragraph data-line-324">
+<p><span class="image"><img src="img/KQM.png" alt="KQM" width="350"></span></p>
+</div>
+<table class="tableblock frame-none grid-all stretch data-line-327">
 <colgroup>
 <col style="width: 70%;">
 <col style="width: 30%;">
@@ -1041,12 +1216,12 @@ Pearson Korrelationskoeffizient
 </tr>
 </tbody>
 </table>
-<div class="sect2 data-line-270">
-<h3 id="_regressionsgerade">Regressionsgerade</h3>
-<div class="paragraph data-line-272">
+<div class="sect2 data-line-348">
+<h3 id="_regressionsgerade">9.1. Regressionsgerade</h3>
+<div class="paragraph data-line-350">
 <p><span class="image"><img src="img/regression.png" alt="Regressionsgerade" width="300"></span></p>
 </div>
-<div class="hdlist data-line-275">
+<div class="hdlist data-line-353">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1054,14 +1229,14 @@ Normalengleichung
 </td>
 <td class="hdlist2">
 <p>\$A^T * A * vecx = A^T * vecy "  " &lt;=&gt; "  " A^T * A * ((m),(q)) = A^T * ((y_1), (vdots " "), (y_n))\$</p>
-<div class="paragraph data-line-277">
+<div class="paragraph data-line-355">
 <p>\$vecx = (A^T * A)^-1 * A^T * vecy\$</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch data-line-280">
+<table class="tableblock frame-all grid-all stretch data-line-358">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1098,10 +1273,10 @@ Normalengleichung
 </div>
 </div>
 </div>
-<div class="sect1 data-line-298">
-<h2 id="_zentraler_grenzwertsatz_zgs">Zentraler Grenzwertsatz (ZGS)</h2>
+<div class="sect1 data-line-376">
+<h2 id="_zentraler_grenzwertsatz_zgs">10. Zentraler Grenzwertsatz (ZGS)</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch data-line-300">
+<table class="tableblock frame-all grid-all stretch data-line-378">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1127,7 +1302,7 @@ Normalengleichung
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-none stretch data-line-309">
+<table class="tableblock frame-none grid-none stretch data-line-387">
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1142,34 +1317,34 @@ Normalengleichung
 </table>
 </div>
 </div>
-<div class="sect1 data-line-316">
-<h2 id="_schliessende_statistik">Schliessende Statistik</h2>
+<div class="sect1 data-line-394">
+<h2 id="_schliessende_statistik">11. Schliessende Statistik</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-318">
-<h3 id="_grösse_des_vertrauensintervall_vi">Grösse des Vertrauensintervall (VI)</h3>
-<div class="ulist data-line-320">
+<div class="sect2 data-line-396">
+<h3 id="_grösse_des_vertrauensintervall_vi">11.1. Grösse des Vertrauensintervall (VI)</h3>
+<div class="ulist data-line-398">
 <ul>
-<li class="data-line-320">
+<li class="data-line-398">
 <p>Je grösser das \$gamma\$, desto grösser das VI</p>
 </li>
-<li class="data-line-321">
+<li class="data-line-399">
 <p>Je grösser der Stichprobenumfang \$n\$, desto kleiner das VI (bei konsistenten Schätzfunktionen)</p>
 </li>
-<li class="data-line-322">
+<li class="data-line-400">
 <p>Bei unbekannter Varianz wird ds VI grösser</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-324">
+<div class="paragraph data-line-402">
 <p><span class="image"><img src="img/Vertrauensintervalle.png" alt="Vertrauensintervalle"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-326">
-<h2 id="_tabelle">Tabelle</h2>
+<div class="sect1 data-line-404">
+<h2 id="_tabelle">12. Tabelle</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-328">
+<div class="paragraph data-line-406">
 <p><a href="img/TabellenVerteilungen.pdf" target="_blank" rel="noopener">Tabellen Verteilung</a></p>
 </div>
 </div>
@@ -1178,7 +1353,7 @@ Normalengleichung
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2021-01-06 13:40:04 +0100
+Last updated 2021-01-17 11:38:25 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">

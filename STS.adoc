@@ -1,9 +1,8 @@
 = STS Zusammenfassung
 Joël Plambeck <plambjoe@students.zhaw.ch>
 0.1,
-
 :toc:
-:secnums:
+:sectnums:
 :icons: font
 :stem: asciimath
 :imagesdir: img
@@ -62,14 +61,20 @@ CDF:: Cumulative distribution function
 ^.^|stem:[X_q = {(1/2 (X_(nq) + X_(nq+1)), n * q " ganzzahlig"),(\|~X_(nq)~\|, n * q " nicht ganzzahlig"):}]
 ^.^|stem:["F(A)" <= x  <= "F(B)"]
 
-stem:[(Q_(0.79) - "A")/(0.79 - "F(A)") = ("B" - "A")/("F(B)" - "F(A)")]
+stem:[(F(b)-F(a))/(b-a) = (q-F(a))/(R_q - a)]
+
+stem:[R_q = a + (b-a) * (q -F(a))/(F(b)-F(a))]
+
+stem:[F(x) = "CDF an Stelle " x]
+
+stem:[R_q = 425 " (Bsp),  " q = 0.3 " (Bsp)"]
 
 .^|**arith. Mittel**
 ^.^|stem:[bar x = 1/n sum_(i=1)^n x_i]
 ^.^|stem:[bar x = sum_(i=1)^m M_i * f_i]
 
 .^|**Varianz**
-^.^|stem:[S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2]
+^.^|stem:[S^(2) = 1/n sum_(i=1)^n (x_i - bar x)^2 = bar(x^2) - bar x^2]
 ^.^|stem:[S^2 = sum_(i=1)^n (M_i - bar x)^2 * f_i]
 
 .^|**Varianz (korr)**
@@ -108,9 +113,12 @@ Gegeben sind die Wertepaare stem:[(x_1, y_1), (x_2, y_2),...,(x_n, y_n)]
 
 .^|Standardabweichung 
 ^.^|
-stem:[S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2)] 
+stem:[S_x = sqrt(1/n sum_(i=1)^n (x_i - bar x)^2) = sqrt (bar (x^2) - (bar x)^2) = sqrt (S_x^2)] 
 
-stem:[S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2)]
+stem:[S_y = sqrt(1/n sum_(i=1)^n (y_i - bar y)^2) = sqrt (bar (y^2) - (bar y)^2) = sqrt (S_y^2)]
+
+.^|Varianz
+^.^|stem:[S^(2) = bar(x^2) - bar x^2 = 1/n sum_(i=1)^n (x_i - bar x)^2]
 
 .^|Kovarianz
 ^.^|stem:[S_(xy) = sqrt(1/n sum_(i=1)^n (x_i - bar x)(y_i - bar y)) = bar (xy) - barx * bary]
@@ -128,13 +136,64 @@ stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
 
 image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
 
+Binomialkoeffizient: stem:[((n),(k)) = (n!)/((n-k)!*k!)]
+
+Zahlenschlossproblem:: Das Zahlenschloss hat 6 Zahlenkränze mit den Zahlen 0 bis 9. An jedem Kranz können
+unabhängig von den anderen Kränzen 10 verschiedene Zahlen eingestellt werden. Dabei kann jede Zahl mehrfach
+vorkommen.
++
+stem:[10^6]
+
+Schwimmwettkampf:: Platzierung 1-3 mit 10 Schwimmern
++
+stem:[10 * 9 * 8 = (10!)/((10-3)!) = 720]
+
+Lotto:: Bei der Ziehung 6 aus 49 spielt die Reihenfolge der gezogenen Zahlen keine Rolle, allerdings kann jede der Zahlen nur einmal vorkommen, da die Kugeln nicht mehr zurückgelegt werden. Käme es auf die Reihenfolge an, so hätte man wie im Problem mit den Schwimmerinnen 6 Plätze für mögliche 49 Zahlen zu besetzen.
+
+Bitproblem:: Binärzahl mit 64 Stellen: stem:[2^64]
+
+Zahnarztproblem:: Eine Zahnärztin erlaubt den Kindern, nach der Behandlung zur Belohnung 3 Spielzeuge aus 5 Töpfen auszusuchen. Die 5 Töpfe sind jeweils mit einer Art Spielzeug befüllt. Wie viele verschiedene Möglichkeiten hat ein Kind?
+Das komplizierteste der hier beschriebenen Abzählprobleme wird mit einem Ersatzproblem gelöst. Dabei handelt
+es sich um ein äquivalentes Problem, welches einfacher zu lösen ist. Jede Auswahl von 3 Objekten aus den 5
+Schalen kann eindeutig durch 3 Striche III und 4 Kreuze XXXX beschrieben werden:
++
+image:ZahnarztProblem.png[Zahnarzt Problem, 200]
++
+stem:[((7), (3)) = ((7), (4)) = 35]
+
+Fussballmannschaft:: Aus 20 Studierenden sollen 11 Personen ausgewählt werden. Wie beim Lotto 6 aus 49 ist das Problem hier 11 aus 20.
++
+stem:[((20), (11)) = 167'960]
+
+Buchstabenproblem:: Mit 10 verschiedenen Buchstaben Worte von 5 Zeichen bilden.
+
+Tellschiessen:: Wilhelm Tell schiesst mit drei Pfeilen auf eine Zielscheibe, welche in 10 ringförmige Bereiche unterteilt ist. Wenn
+man Wilhelm die Möglichkeit zugesteht daneben zu schiessen, so hat er 3 Versuche mit jeweils 11 verschiedenen Resultaten, wobei Resultate mehrfach vorkommen können.
+3 Objekte aus 11 möglichen Sorten zu wählen.
++
+stem:[((11 - 1 + 3), (3)) = ((13), (3)) = 286]
+
+Napoleon:: Napoleon schart seine 10 Generäle an einen kreisrunden Tisch mit 11 Plätzen. Bei der Sitzordnung kommt es nur auf die Reihenfolge der Personen an. Man könnte den Tisch auch drehen und die Sitzordnung bleibt dieselbe.
++
+stem:[10! = 3628800]
+
+Gruppen:: Wie viele verschiedene Personengruppen kann man aus einer Klasse mit 20 Studierenden bilden?
+Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
+1 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0
++
+stem:[2^20 - 1]
+
+Teilmengen:: Eine Möglichkeit die Teilmengen der Menge {1,2,3,4 zu kategorisieren (Potenzmenge)
++
+stem:[2^n = 2^4 = 16]
+
 == Elementare Wahrscheinlichkeitsrechnung
+
+stem:[(P(A nn B))/(P(A)) = P(B|A)]
 
 stem:[E(X) = sum_(x in RR)(x * f(x))]
 
 stem:[V(X) = E((X-E(X))^2) = sum_(x in RR)((x-E(X))^2 * f(x))]
-
-stem:[(P(A nn B))/(P(A)) = P(B|A)]
 
 Linearität des Erwartungwertes::
 * stem:[E(X+Y) = E(X) + E(Y)]
@@ -148,7 +207,7 @@ Verschiebungssatz für die Varianz::
 
 Eine **diskrete** Zufallsvariable nimmt nur bestimmte Werte an
 
-Eine **stetige** Zufallsvariable kann jedem beliebigen WErt in einem Intervall annehmen
+Eine **stetige** Zufallsvariable kann jedem beliebigen Wert in einem Intervall annehmen
 
 === Diskrete und stetige Verteilungen
 
@@ -227,6 +286,11 @@ p:: Wahrscheinlichkeit für ein Ergebnis 1,  stem:[p = M/N]
 
 ==== Poissonverteilung
 
+stem:[X ~ P(lambda)]
+
+[horizontal]
+stem:[lambda]:: stem:[lambda > 0] , durchscnittliche Anzahl Ereignisse pro betratetes Zeitintervall
+
 Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.
 
 
@@ -238,12 +302,26 @@ stem:[X~N(mu,sigma)]
 
 stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
 
+=== Zentraler Grenzwertsatz
+
+[cols="2*a", frame="none", grid="none"]
+|===
+|
+stem:[U_n = (S_n - nmu)/(sqrtmu * sigma) = (barX_n - mu)/(sigma/sqrtn)]
+
+|stem:[S_n = X_1 + X_2 + ... + X_n]
+
+stem:[barX_n = 1/n (X_1 + X_2 + ... + X_n)]
+|===
+
 === Approximaiton durch Normalverteilung
 
 . Geschlossenes Intervall zu offenes intervall: stem:[P(? < X < ?) -> P(?+1 <= X <= ?-1)]
 . Intervall um 0.5 auf beiden Seiten vergrössern: stem:[P(?-0.5 <= Y <= ?+0.5)]
 
 == KQM
+
+image:KQM.png[KQM, 350]
 
 [cols="7a,3a", frame="none"]
 |===
