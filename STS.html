@@ -724,34 +724,53 @@ CDF
 <img src="img/bil_kombinatorik_uebersicht.png" alt="Kombinatorik übersicht">
 </div>
 </div>
-<div class="paragraph data-line-139">
+<table class="tableblock frame-none grid-all stretch data-line-140">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Binomialkoeffizient: \$((n),(k)) = (n!)/((n-k)!*k!)\$</p>
-</div>
-<div class="dlist data-line-141">
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>\$(n!)/((n-k)!) = ((n),(k)) * k!\$</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="dlist data-line-145">
 <dl>
 <dt class="hdlist1">Zahlenschlossproblem</dt>
 <dd>
 <p>Das Zahlenschloss hat 6 Zahlenkränze mit den Zahlen 0 bis 9. An jedem Kranz können
 unabhängig von den anderen Kränzen 10 verschiedene Zahlen eingestellt werden. Dabei kann jede Zahl mehrfach
 vorkommen.</p>
-<div class="paragraph data-line-145">
+<div class="paragraph data-line-149">
 <p>\$10^6\$</p>
 </div>
 </dd>
 <dt class="hdlist1">Schwimmwettkampf</dt>
 <dd>
 <p>Platzierung 1-3 mit 10 Schwimmern</p>
-<div class="paragraph data-line-149">
+<div class="paragraph data-line-153">
 <p>\$10 * 9 * 8 = (10!)/((10-3)!) = 720\$</p>
 </div>
 </dd>
 <dt class="hdlist1">Lotto</dt>
 <dd>
 <p>Bei der Ziehung 6 aus 49 spielt die Reihenfolge der gezogenen Zahlen keine Rolle, allerdings kann jede der Zahlen nur einmal vorkommen, da die Kugeln nicht mehr zurückgelegt werden. Käme es auf die Reihenfolge an, so hätte man wie im Problem mit den Schwimmerinnen 6 Plätze für mögliche 49 Zahlen zu besetzen.</p>
+<div class="paragraph data-line-157">
+<p>\$(49!)/((49-6)!)\$</p>
+</div>
 </dd>
 <dt class="hdlist1">Bitproblem</dt>
 <dd>
-<p>Binärzahl mit 64 Stellen: \$2^64\$</p>
+<p>Binärzahl mit 64 Stellen:</p>
+<div class="paragraph data-line-161">
+<p>\$2^64\$</p>
+</div>
 </dd>
 <dt class="hdlist1">Zahnarztproblem</dt>
 <dd>
@@ -759,17 +778,17 @@ vorkommen.</p>
 Das komplizierteste der hier beschriebenen Abzählprobleme wird mit einem Ersatzproblem gelöst. Dabei handelt
 es sich um ein äquivalentes Problem, welches einfacher zu lösen ist. Jede Auswahl von 3 Objekten aus den 5
 Schalen kann eindeutig durch 3 Striche III und 4 Kreuze XXXX beschrieben werden:</p>
-<div class="paragraph data-line-160">
+<div class="paragraph data-line-168">
 <p><span class="image"><img src="img/ZahnarztProblem.png" alt="Zahnarzt Problem" width="200"></span></p>
 </div>
-<div class="paragraph data-line-162">
+<div class="paragraph data-line-170">
 <p>\$((7), (3)) = ((7), (4)) = 35\$</p>
 </div>
 </dd>
 <dt class="hdlist1">Fussballmannschaft</dt>
 <dd>
 <p>Aus 20 Studierenden sollen 11 Personen ausgewählt werden. Wie beim Lotto 6 aus 49 ist das Problem hier 11 aus 20.</p>
-<div class="paragraph data-line-166">
+<div class="paragraph data-line-174">
 <p>\$((20), (11)) = 167'960\$</p>
 </div>
 </dd>
@@ -782,14 +801,14 @@ Schalen kann eindeutig durch 3 Striche III und 4 Kreuze XXXX beschrieben werden:
 <p>Wilhelm Tell schiesst mit drei Pfeilen auf eine Zielscheibe, welche in 10 ringförmige Bereiche unterteilt ist. Wenn
 man Wilhelm die Möglichkeit zugesteht daneben zu schiessen, so hat er 3 Versuche mit jeweils 11 verschiedenen Resultaten, wobei Resultate mehrfach vorkommen können.
 3 Objekte aus 11 möglichen Sorten zu wählen.</p>
-<div class="paragraph data-line-174">
+<div class="paragraph data-line-182">
 <p>\$((11 - 1 + 3), (3)) = ((13), (3)) = 286\$</p>
 </div>
 </dd>
 <dt class="hdlist1">Napoleon</dt>
 <dd>
 <p>Napoleon schart seine 10 Generäle an einen kreisrunden Tisch mit 11 Plätzen. Bei der Sitzordnung kommt es nur auf die Reihenfolge der Personen an. Man könnte den Tisch auch drehen und die Sitzordnung bleibt dieselbe.</p>
-<div class="paragraph data-line-178">
+<div class="paragraph data-line-186">
 <p>\$10! = 3628800\$</p>
 </div>
 </dd>
@@ -798,14 +817,14 @@ man Wilhelm die Möglichkeit zugesteht daneben zu schiessen, so hat er 3 Versuch
 <p>Wie viele verschiedene Personengruppen kann man aus einer Klasse mit 20 Studierenden bilden?
 Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 1 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0</p>
-<div class="paragraph data-line-184">
+<div class="paragraph data-line-192">
 <p>\$2^20 - 1\$</p>
 </div>
 </dd>
 <dt class="hdlist1">Teilmengen</dt>
 <dd>
 <p>Eine Möglichkeit die Teilmengen der Menge {1,2,3,4 zu kategorisieren (Potenzmenge)</p>
-<div class="paragraph data-line-188">
+<div class="paragraph data-line-196">
 <p>\$2^n = 2^4 = 16\$</p>
 </div>
 </dd>
@@ -813,28 +832,28 @@ Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 </div>
 </div>
 </div>
-<div class="sect1 data-line-190">
+<div class="sect1 data-line-198">
 <h2 id="_elementare_wahrscheinlichkeitsrechnung">6. Elementare Wahrscheinlichkeitsrechnung</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-192">
+<div class="paragraph data-line-200">
 <p>\$(P(A nn B))/(P(A)) = P(B|A)\$</p>
 </div>
-<div class="paragraph data-line-194">
+<div class="paragraph data-line-202">
 <p>\$E(X) = sum_(x in RR)(x * f(x))\$</p>
 </div>
-<div class="paragraph data-line-196">
+<div class="paragraph data-line-204">
 <p>\$V(X) = E((X-E(X))^2) = sum_(x in RR)((x-E(X))^2 * f(x))\$</p>
 </div>
-<div class="dlist data-line-198">
+<div class="dlist data-line-206">
 <dl>
 <dt class="hdlist1">Linearität des Erwartungwertes</dt>
 <dd>
-<div class="ulist data-line-199">
+<div class="ulist data-line-207">
 <ul>
-<li class="data-line-199">
+<li class="data-line-207">
 <p>\$E(X+Y) = E(X) + E(Y)\$</p>
 </li>
-<li class="data-line-200">
+<li class="data-line-208">
 <p>\$E(alphaX) = alphaE(X)\$</p>
 </li>
 </ul>
@@ -842,12 +861,12 @@ Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 </dd>
 <dt class="hdlist1">Verschiebungssatz für die Varianz</dt>
 <dd>
-<div class="ulist data-line-203">
+<div class="ulist data-line-211">
 <ul>
-<li class="data-line-203">
+<li class="data-line-211">
 <p>\$V(X) = E(X^2) - E(X)^2 = (sum_(x in RR)P(X=x) * x^2)-E(X)^2\$</p>
 </li>
-<li class="data-line-204">
+<li class="data-line-212">
 <p>\$V(alpha X + beta) = alpha^2 * V(X) " mit " alpha,beta in RR\$</p>
 </li>
 </ul>
@@ -857,18 +876,18 @@ Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 </div>
 </div>
 </div>
-<div class="sect1 data-line-206">
+<div class="sect1 data-line-214">
 <h2 id="_spezielle_verteilungen">7. Spezielle Verteilungen</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-208">
+<div class="paragraph data-line-216">
 <p>Eine <strong>diskrete</strong> Zufallsvariable nimmt nur bestimmte Werte an</p>
 </div>
-<div class="paragraph data-line-210">
+<div class="paragraph data-line-218">
 <p>Eine <strong>stetige</strong> Zufallsvariable kann jedem beliebigen Wert in einem Intervall annehmen</p>
 </div>
-<div class="sect2 data-line-212">
+<div class="sect2 data-line-220">
 <h3 id="_diskrete_und_stetige_verteilungen">7.1. Diskrete und stetige Verteilungen</h3>
-<table class="tableblock frame-all grid-all stretch data-line-214">
+<table class="tableblock frame-all grid-all stretch data-line-222">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -926,13 +945,13 @@ Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 </tr>
 </tbody>
 </table>
-<div class="paragraph data-line-234">
+<div class="paragraph data-line-242">
 <p><strong>Verschiebungssatzu für die Varianz</strong> = \$V(X)=E(X^2) - E(X)^2\$</p>
 </div>
 </div>
-<div class="sect2 data-line-236">
+<div class="sect2 data-line-244">
 <h3 id="_diskrete_verteilungen">7.2. Diskrete Verteilungen</h3>
-<table class="tableblock frame-all grid-all stretch data-line-239">
+<table class="tableblock frame-all grid-all stretch data-line-247">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -980,15 +999,15 @@ Die so beschriebene Gruppe kann mit dem folgenden Bitmuster abgebildet werden:
 </tr>
 </tbody>
 </table>
-<div class="sect3 data-line-250">
+<div class="sect3 data-line-258">
 <h4 id="_hypergeometrische_verteilung">7.2.1. Hypergeometrische Verteilung</h4>
-<div class="paragraph data-line-251">
+<div class="paragraph data-line-259">
 <p>Wir betrachten eine Urne mit 𝑁 Objekten. Darunter sind 𝑀 Objekte einer bestimmten Sorte, wir nennen sie Sorte 𝑀, die Merkmalsträger und 𝑁 − 𝑀 andersartige Objekte. Es wird zufällig eine Stichprobe von 𝑛 Objekten aus der Urne entnommen. Das Ziehen kann auf einmal passieren oder auch nacheinander, wichtig aber ist, dass ohne Zurücklegen der Objekte gezogen wird</p>
 </div>
-<div class="paragraph data-line-253">
+<div class="paragraph data-line-261">
 <p>\$X~H(N,M,n)\$</p>
 </div>
-<div class="hdlist data-line-256">
+<div class="hdlist data-line-264">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1018,12 +1037,12 @@ n
 </div>
 </div>
 </div>
-<div class="sect2 data-line-260">
+<div class="sect2 data-line-268">
 <h3 id="_bernoulliverteilung">7.3. Bernoulliverteilung</h3>
-<div class="paragraph data-line-262">
+<div class="paragraph data-line-270">
 <p>Bernoulli-Experimente sind Zufallsexperimente mit nur zwei möglichen Ergebnissen. Wir bezeichnen diese Ergebnisse mit 1 und 0.</p>
 </div>
-<table class="tableblock frame-none grid-none stretch data-line-265">
+<table class="tableblock frame-none grid-none stretch data-line-273">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1039,15 +1058,15 @@ n
 </tr>
 </tbody>
 </table>
-<div class="sect3 data-line-277">
+<div class="sect3 data-line-285">
 <h4 id="_binomialverteilung">7.3.1. Binomialverteilung</h4>
-<div class="paragraph data-line-279">
+<div class="paragraph data-line-287">
 <p>Die Binomialverteilung ist eine Bernoulliverteilung die \$n\$ mal durchgeführt wird.</p>
 </div>
-<div class="paragraph data-line-281">
+<div class="paragraph data-line-289">
 <p>\$X ~B(n,p)\$</p>
 </div>
-<div class="hdlist data-line-284">
+<div class="hdlist data-line-292">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1068,12 +1087,12 @@ p
 </table>
 </div>
 </div>
-<div class="sect3 data-line-287">
+<div class="sect3 data-line-295">
 <h4 id="_poissonverteilung">7.3.2. Poissonverteilung</h4>
-<div class="paragraph data-line-289">
+<div class="paragraph data-line-297">
 <p>\$X ~ P(lambda)\$</p>
 </div>
-<div class="hdlist data-line-292">
+<div class="hdlist data-line-300">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1085,28 +1104,28 @@ p
 </tr>
 </table>
 </div>
-<div class="paragraph data-line-294">
+<div class="paragraph data-line-302">
 <p>Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-297">
+<div class="sect1 data-line-305">
 <h2 id="_standardnomarlverteilung">8. Standardnomarlverteilung</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-299">
+<div class="paragraph data-line-307">
 <p>\$P(|x-mu| &lt;= e)\$</p>
 </div>
-<div class="paragraph data-line-301">
+<div class="paragraph data-line-309">
 <p>\$X~N(mu,sigma)\$</p>
 </div>
-<div class="paragraph data-line-303">
+<div class="paragraph data-line-311">
 <p>\$phi_(mu,sigma)(x) = phi((x-mu)/sigma)\$</p>
 </div>
-<div class="sect2 data-line-305">
+<div class="sect2 data-line-313">
 <h3 id="_zentraler_grenzwertsatz">8.1. Zentraler Grenzwertsatz</h3>
-<table class="tableblock frame-none grid-none stretch data-line-308">
+<table class="tableblock frame-none grid-none stretch data-line-316">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1126,14 +1145,14 @@ p
 </tbody>
 </table>
 </div>
-<div class="sect2 data-line-317">
+<div class="sect2 data-line-325">
 <h3 id="_approximaiton_durch_normalverteilung">8.2. Approximaiton durch Normalverteilung</h3>
-<div class="olist arabic data-line-319">
+<div class="olist arabic data-line-327">
 <ol class="arabic">
-<li class="data-line-319">
+<li class="data-line-327">
 <p>Geschlossenes Intervall zu offenes intervall: \$P(? &lt; X &lt; ?) -&gt; P(?+1 &lt;= X &lt;= ?-1)\$</p>
 </li>
-<li class="data-line-320">
+<li class="data-line-328">
 <p>Intervall um 0.5 auf beiden Seiten vergrössern: \$P(?-0.5 &lt;= Y &lt;= ?+0.5)\$</p>
 </li>
 </ol>
@@ -1141,13 +1160,13 @@ p
 </div>
 </div>
 </div>
-<div class="sect1 data-line-322">
+<div class="sect1 data-line-330">
 <h2 id="_kqm">9. KQM</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-324">
+<div class="paragraph data-line-332">
 <p><span class="image"><img src="img/KQM.png" alt="KQM" width="350"></span></p>
 </div>
-<table class="tableblock frame-none grid-all stretch data-line-327">
+<table class="tableblock frame-none grid-all stretch data-line-335">
 <colgroup>
 <col style="width: 70%;">
 <col style="width: 30%;">
@@ -1216,12 +1235,12 @@ Pearson Korrelationskoeffizient
 </tr>
 </tbody>
 </table>
-<div class="sect2 data-line-348">
+<div class="sect2 data-line-356">
 <h3 id="_regressionsgerade">9.1. Regressionsgerade</h3>
-<div class="paragraph data-line-350">
+<div class="paragraph data-line-358">
 <p><span class="image"><img src="img/regression.png" alt="Regressionsgerade" width="300"></span></p>
 </div>
-<div class="hdlist data-line-353">
+<div class="hdlist data-line-361">
 <table>
 <tr>
 <td class="hdlist1">
@@ -1229,14 +1248,14 @@ Normalengleichung
 </td>
 <td class="hdlist2">
 <p>\$A^T * A * vecx = A^T * vecy "  " &lt;=&gt; "  " A^T * A * ((m),(q)) = A^T * ((y_1), (vdots " "), (y_n))\$</p>
-<div class="paragraph data-line-355">
+<div class="paragraph data-line-363">
 <p>\$vecx = (A^T * A)^-1 * A^T * vecy\$</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all stretch data-line-358">
+<table class="tableblock frame-all grid-all stretch data-line-366">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1273,10 +1292,10 @@ Normalengleichung
 </div>
 </div>
 </div>
-<div class="sect1 data-line-376">
+<div class="sect1 data-line-384">
 <h2 id="_zentraler_grenzwertsatz_zgs">10. Zentraler Grenzwertsatz (ZGS)</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch data-line-378">
+<table class="tableblock frame-all grid-all stretch data-line-386">
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -1302,7 +1321,7 @@ Normalengleichung
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-none grid-none stretch data-line-387">
+<table class="tableblock frame-none grid-none stretch data-line-395">
 <colgroup>
 <col style="width: 30%;">
 <col style="width: 70%;">
@@ -1317,34 +1336,34 @@ Normalengleichung
 </table>
 </div>
 </div>
-<div class="sect1 data-line-394">
+<div class="sect1 data-line-402">
 <h2 id="_schliessende_statistik">11. Schliessende Statistik</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-396">
+<div class="sect2 data-line-404">
 <h3 id="_grösse_des_vertrauensintervall_vi">11.1. Grösse des Vertrauensintervall (VI)</h3>
-<div class="ulist data-line-398">
+<div class="ulist data-line-406">
 <ul>
-<li class="data-line-398">
+<li class="data-line-406">
 <p>Je grösser das \$gamma\$, desto grösser das VI</p>
 </li>
-<li class="data-line-399">
+<li class="data-line-407">
 <p>Je grösser der Stichprobenumfang \$n\$, desto kleiner das VI (bei konsistenten Schätzfunktionen)</p>
 </li>
-<li class="data-line-400">
+<li class="data-line-408">
 <p>Bei unbekannter Varianz wird ds VI grösser</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-402">
+<div class="paragraph data-line-410">
 <p><span class="image"><img src="img/Vertrauensintervalle.png" alt="Vertrauensintervalle"></span></p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect1 data-line-404">
+<div class="sect1 data-line-412">
 <h2 id="_tabelle">12. Tabelle</h2>
 <div class="sectionbody">
-<div class="paragraph data-line-406">
+<div class="paragraph data-line-414">
 <p><a href="img/TabellenVerteilungen.pdf" target="_blank" rel="noopener">Tabellen Verteilung</a></p>
 </div>
 </div>
@@ -1353,7 +1372,7 @@ Normalengleichung
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2021-01-17 11:38:25 +0100
+Last updated 2021-01-17 11:48:14 +0100
 </div>
 </div>
 <script type="text/x-mathjax-config">

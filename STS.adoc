@@ -136,7 +136,11 @@ stem:[bar(x^2) = 1/n sum_(i=1)^n x_i^2]
 
 image::bil_kombinatorik_uebersicht.png[Kombinatorik übersicht]
 
-Binomialkoeffizient: stem:[((n),(k)) = (n!)/((n-k)!*k!)]
+[cols="2*a", frame="none"]
+|===
+|Binomialkoeffizient: stem:[((n),(k)) = (n!)/((n-k)!*k!)]
+|stem:[(n!)/((n-k)!) = ((n),(k)) * k!]
+|===
 
 Zahlenschlossproblem:: Das Zahlenschloss hat 6 Zahlenkränze mit den Zahlen 0 bis 9. An jedem Kranz können
 unabhängig von den anderen Kränzen 10 verschiedene Zahlen eingestellt werden. Dabei kann jede Zahl mehrfach
@@ -149,8 +153,12 @@ Schwimmwettkampf:: Platzierung 1-3 mit 10 Schwimmern
 stem:[10 * 9 * 8 = (10!)/((10-3)!) = 720]
 
 Lotto:: Bei der Ziehung 6 aus 49 spielt die Reihenfolge der gezogenen Zahlen keine Rolle, allerdings kann jede der Zahlen nur einmal vorkommen, da die Kugeln nicht mehr zurückgelegt werden. Käme es auf die Reihenfolge an, so hätte man wie im Problem mit den Schwimmerinnen 6 Plätze für mögliche 49 Zahlen zu besetzen.
++
+stem:[(49!)/((49-6)!)]
 
-Bitproblem:: Binärzahl mit 64 Stellen: stem:[2^64]
+Bitproblem:: Binärzahl mit 64 Stellen:
++
+stem:[2^64]
 
 Zahnarztproblem:: Eine Zahnärztin erlaubt den Kindern, nach der Behandlung zur Belohnung 3 Spielzeuge aus 5 Töpfen auszusuchen. Die 5 Töpfe sind jeweils mit einer Art Spielzeug befüllt. Wie viele verschiedene Möglichkeiten hat ein Kind?
 Das komplizierteste der hier beschriebenen Abzählprobleme wird mit einem Ersatzproblem gelöst. Dabei handelt
