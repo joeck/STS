@@ -195,6 +195,8 @@ Teilmengen:: Eine Möglichkeit die Teilmengen der Menge {1,2,3,4 zu kategoris
 +
 stem:[2^n = 2^4 = 16]
 
+image:Kombinatorik.png[Kombinatorik]
+
 == Elementare Wahrscheinlichkeitsrechnung
 
 stem:[(P(A nn B))/(P(A)) = P(B|A)]
@@ -302,13 +304,19 @@ stem:[lambda]:: stem:[lambda > 0] , durchscnittliche Anzahl Ereignisse pro betra
 Die Poisson Verteilung wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Bereich beliebig oft auftreten können.
 
 
-== Standardnomarlverteilung
+== Standardnormalverteilung
 
 stem:[P(|x-mu| <= e)]
 
 stem:[X~N(mu,sigma)]
 
-stem:[phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
+Gaussnormalverteilung: stem:[mu = 0 " , " sigma = 1]
+
+stem:[N(mu,sigma) " und " P(T <= x) -> phi_(mu,sigma)(x) = phi((x-mu)/sigma)]
+
+PDF:: stem:[varphi_(mu,sigma)(x) = 1/(sqrt(2pi) * sigma) * e^(-1/2((x-mu)/sigma)^2)]
+
+CDF:: stem:[phi_(mu,sigma)(x) = int_-oo^x varphi_(mu,sigma)(t)dt = P(X <= x)]
 
 === Zentraler Grenzwertsatz
 
@@ -320,6 +328,27 @@ stem:[U_n = (S_n - nmu)/(sqrtmu * sigma) = (barX_n - mu)/(sigma/sqrtn)]
 |stem:[S_n = X_1 + X_2 + ... + X_n]
 
 stem:[barX_n = 1/n (X_1 + X_2 + ... + X_n)]
+
+stem:[E(X_i) = mu]
+
+stem:[V(X_i) = sigma^2]
+|===
+
+[cols="4*.^a"]
+|===
+| | Summe | Arithmethisches Mittel | Gleichverteilung: ganze Zahlen [z,...,w]
+
+| Erwartungswert | stem:[E(S_n) = mu * n] | stem:[E(barX_n) = mu] | stem:[E(x)=(z + w)/2]
+.^| Varianz        .^| stem:[V(S_n) = sigma^2 *n] .^| stem:[V(barX_n) = sigma^2 / n] | stem:[V(x)=((w-z)*(w+2-z))/12]
+| Verteilung | stem:[N(mu * n, sqrt n * sigma)] | stem:[N(mu, sigma/sqrt(n))] |
+|===
+
+[cols="3,7",grid="none", frame="none"]
+|===
+| image:BernoulliVerteilung.png[Bernoulli Verteilung, width="300px"] |stem:[E(betax) = int_0^1 f(x)dx ]
+
+stem:[V(alphax) = alpha * E(betax) * (1 - E(betax))]
+
 |===
 
 === Approximaiton durch Normalverteilung
@@ -335,7 +364,7 @@ image:KQM.png[KQM, 350]
 |===
 |
 [horizontal]
-Residuenvarianz:: stem:[S_epsilon^2 = bar (epsilon^2) - bar (epsilon)^2]
+Residuenvarianz:: stem:[S_epsilon^2 = bar (epsilon^2) - bar (epsilon)^2 = S_y^2 - S_(xy)^2/S_x^2]
 Erklärtevarianz:: stem:[S_haty^2 = bar (haty^2) - bar haty ^2 ]
 Totalevarianz:: stem:[S_y^2]
 Bestimmtheistmass:: stem:[R^2 = (S_haty^2)/(S_y^2)]
@@ -377,25 +406,6 @@ stem:[d = bary - m * barx]
 stem:[m = S_(xy)/S_y^2]
 
 stem:[d = barx - m * bary]
-
-|===
-
-
-== Zentraler Grenzwertsatz (ZGS)
-
-|===
-| | Summe | Arithmethisches Mittel
-
-| Erwartungswert | stem:[E(x) = mu * n] | stem:[E(x) = mu]
-.^| Varianz        .^| stem:[V(x) = sigma^2 *n] .^| stem:[V(x) = sigma^2 / n] 
-
-|===
-
-[cols="3,7",grid="none", frame="none"]
-|===
-| image:BernoulliVerteilung.png[Bernoulli Verteilung, width="300px"] |stem:[E(betax) = int_0^1 f(x)dx ]
-
-stem:[V(alphax) = alpha * E(betax) * (1 - E(betax))]
 
 |===
 
